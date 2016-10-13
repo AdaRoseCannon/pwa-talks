@@ -3,8 +3,9 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: Getting started with WebVR
-description: Introduction to A-Frame
+url: https://ada.is/pwa-talks
+name: Building Web Apps
+description: Building apps in the web for increased reach and conversions.
 color: lavenderblush
 url: https://ada.is/getting-started-with-webvr
 author:

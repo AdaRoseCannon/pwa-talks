@@ -12,7 +12,7 @@ This is a little layout for blog posts which can turn into slides using a-slides
 <!-- Link to trigger conversion script -->
 [Convert to Slide Deck](#aslides)
 
-## Set up
+# {{page.title}}
 
 ```bash
 sudo apt-get install bundler zlib1g-dev libxml2-dev nodejs
@@ -37,8 +37,8 @@ It should work with slide remotes and a wii mote on supported platforms
 * f to toggle fullscreen
 * If you hae multiple tabs open (in a broser which supports a service worker), press parent in the control bar and it will control all the other tabs
 
-<!-- This slide uses information from _config.yml -->
-<blockquote class="dark" id="splash-slide" style="background-image: url('images/pattern.svg');">
+<!-- This slide uses information from _config.yml and the page settings -->
+<blockquote class="dark" id="splash-slide" style="background-image: url('images/bird1.jpg');">
 <h1>{{ page.title }}</h1>
 <h3>{{ page.description }}</h3>
 <h2>{{site.author.name}} - {{site.author.company}}</h2>
