@@ -36,31 +36,53 @@ You don't have the appstore getting in the way between your initial web presence
 * Progressive Enhancement
 
 <!-- This slide uses information from _config.yml -->
-<blockquote class="dark" id="splash-slide" style="background-image: url('images/bird1.jpg');">
+<blockquote class="dark" id="splash-slide" style="background-image: url('images/bird2.jpg');">
 <h1>What is a progressive web app?</h1>
 </blockquote>
 
 ## Is a progressive web app right for you?
 
 * Do you need
-* Ideal use cases: Documents, media streaming, retail (mention web payment apis), communication, security and trust (many eyes looking at it), low-mid end gaming, VR, need easy sharing i.e. trying to go viral.
+* Ideal use cases: Documents, media streaming, retail (mention web payment apis), communication, low-mid end gaming, VR, need easy sharing i.e. trying to go viral.
+* Small teams aiming at a wide variety of platforms with a single product, but still need a presence on the home screen. Non-profits especially due to fiscally eficient and high engagement.
+* Take advantage of the web's built in security and privacy powers, increase sharing and engagement, deploy in seconds rather than hours, strong developer eco system.
+
+<blockquote class="dark" id="splash-slide" style="background-image: url('images/bird3.jpg');">
+<div>
+	<h1>Is a Web App right for you?</h1>
+	<h2>(It probably is)</h2>
+</div>
+</blockquote>
+
+## How do web apps increase engagement?
+
+* Users don't want a relationship with your product. By downloading an app you are trying to build a relationship. A web app is 'try before you buy', it is dating before you get into a relationship.
+
+* Each action in installing an app will cause users to drop off. By sending user's away from your website to an app store will get only small fraction of your users engaging with your product again.
+
+<blockquote class="dark" id="splash-slide" style="background-image: url('images/bird4.jpg');">
+<div><h1><i>
+	“I’m not here to enter into a relationship. I just want to buy something.”
+</i></h1><h2>
+	 Jared M. Spool - The $300 Million Button <br /> (https://articles.uie.com/three_hund_million_button/)
+</h2></div>
+<div><h1><i>
+	“Research has shown that the UX of requiring an action creates a 20% fall off rate, which has a direct effect when you want to send your users away to an app store.”
+</i></h1><h2>
+	 Remy Sharp - State of the gap <br /> (https://remysharp.com/2016/05/28/state-of-the-gap)
+</h2></div>
+</blockquote>
 
 ## When may a web app not be the best route?
 
 * Do you need access to low level device apis not available through the web.
   * High End gaming
   * Bluetooth
-  *
 * Do you need to circumvent the web's security model. For your user's sake I hope not.
   * The web platform tries to resist tracking and privacy issues. Why do you think facebook would rather you be in the app than the web.
 
-## As a developer
-
-Take advantage of the web's built in security and privacy powers, increase sharing and engagement, deploy in seconds rather than hours, strong developer eco system.
-
-<blockquote class="dark" id="splash-slide" style="background-image: url('images/bird2.jpg');">
-<h1>Is a Web App right for you?</h1>
-<h2>(It probably is)</h2>
+<blockquote class="dark" id="splash-slide" style="background-image: url('images/bird5.jpg');">
+<h1>Web Apps can't fulfill every app use case.</h1>
 </blockquote>
 
 ## What goes into a web app
@@ -94,6 +116,27 @@ I provide some progressive enhancements (stats for the UK from caniuse)
 
 * If indexeddb is supported I store their preferences (93.8% of users)
 * If service workers are supported they can go offline (58.1% of users)
+## Progressive Enhancement
+
+Not all app-like features are supported by all browsers it is up to you to decide what is important and what is not.
+
+* Work out minimum functionality and 'must have' features
+* Decide how to support them, provide a polyfill, a fallback, no feature or deny that user any content.
+* Long tail of the web so more work less gain
+
+E.g. For Podle the base functionality is searching for and playing podcasts.
+This can be accomplished with just HTML forms and links. So that is my base functionality.
+
+I provide some progressive enhancements (stats for the UK from caniuse)
+
+* If indexeddb is supported I store their preferences (93.8% of users)
+* If service workers are supported they can go offline (58.1% of users)
+* If push notifications are supported they can recieve push notifications when their podcasts update (52.59% of users)
+* If the audio element is supported they can play inline (96.85% of users)
+* If they have flexbox support they get a nicer layout (93.21% of users)
+
+None of these experiences are essential to the podcast experience but are enhancements.
+
 * If push notifications are supported they can recieve push notifications when their podcasts update (52.59% of users)
 * If the audio element is supported they can play inline (96.85% of users)
 * If they have flexbox support they get a nicer layout (93.21% of users)
@@ -102,6 +145,8 @@ None of these experiences are essential to the podcast experience but are enhanc
 
 It is okay for a user on iOS Safari because although there is no service worker so no offline or push notifications they still get a great experience regardless.
 
+As browsers get more features they will recieve a better expereince.
+
 * Not all browsers support push notifications that is okay
 * Not all browsers support service workers that is okay
 
@@ -109,7 +154,7 @@ It is okay for a user on iOS Safari because although there is no service worker 
 ## Accessible
 * Take advantage of the webs accessiblity by building syntactically
 
-<blockquote class="dark" id="splash-slide" style="background-image: url('images/bird2.jpg');">
+<blockquote class="dark" id="splash-slide" style="background-image: url('images/bird5.jpg');">
 <h1>What goes into a web app?</h1>
 </blockquote>
 
