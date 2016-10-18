@@ -79,7 +79,7 @@ You don't have the appstore getting in the way between your initial web presence
   * High End gaming
   * Bluetooth
 * Do you need to circumvent the web's security model. For your user's sake I hope not.
-  * The web platform tries to resist tracking and privacy issues. Why do you think facebook would rather you be in the app than the web.
+  * The web platform tries to resist allowing APIs which could enable user tracking and privacy.
 
 <blockquote class="dark" id="splash-slide" style="background-image: url('images/bird5.jpg');">
 <h1>Web Apps can't fulfill every app use case.</h1>
@@ -97,17 +97,35 @@ Been doing it for years but remember
 * Allow zooming in for accessiblity
 * must still work on the desktop
 
+> # Responsive design illustration
+
 ## Offline First
 * local databases e.g. idb -> pouch for syncing
 * service workers
+* cache api, the cache api allows one to store network responses. This is very powerful api allowing here are a few examples of how it can be used.
+  * Use this to provide stale content when the network is not optimal.
+  * Store rarely changing resources to avoid repeat network events.
+  * Speed up responses by providing cached content, then updating in the background.
+
+## Interactions
+* Native App users have the expectation that interactions give immediate feedback and this expectation is expected of web apps too.
+* In this example I have intercepted all link clicks and form submits and handle them via ajax requests. Whilst the content loads I show dummy content to allow me to start an animation to disguise loading and present *something* whilst the network/cache request happens.
+
+## Preserving the benefits of the Web
+
+Most likely you will choose to hide the URL bar for *'that appy feeling'*. This means that a whole bunch of benefits inherent to the tradional web are lost and need to be reimplemented.
+
+* URLs provide some method of deep linking and sharing for your site. Otherwise you will loose the virality of web content.
+* Network conditions and load failures. Won't be as visible handle these and assist your user.
+* Probably want to opem 3rd party urls in a new browser tab
 
 ## Progressive Enhancement
 
 Not all app-like features are supported by all browsers it is up to you to decide what is important and what is not.
 
 * Work out minimum functionality and 'must have' features
-* Decide how to support them, provide a polyfill, a fallback, no feature or deny that user any content.
-* Long tail of the web so more work less gain
+* Decide how to support them, provide a polyfill, a fallback feature, no feature or deny that user any content.
+* Long tail of the web so more work less gain.
 
 E.g. For Podle the base functionality is searching for and playing podcasts.
 This can be accomplished with just HTML forms and links. So that is my base functionality.
@@ -116,6 +134,7 @@ I provide some progressive enhancements (stats for the UK from caniuse)
 
 * If indexeddb is supported I store their preferences (93.8% of users)
 * If service workers are supported they can go offline (58.1% of users)
+
 ## Progressive Enhancement
 
 Not all app-like features are supported by all browsers it is up to you to decide what is important and what is not.
@@ -158,6 +177,26 @@ As browsers get more features they will recieve a better expereince.
 <h1>What goes into a web app?</h1>
 </blockquote>
 
+## Security
+
+A service worker only works on http. So redirect all users to the https version.
+
+Use HSTS to enforce this. You can submit your website to a HSTS preload list which gets compiled into Chrome so those user's can never access an unsecured version of your site.
+
+Power of a service worker means a malicous 3rd party could inject some scripts tweak your cache so that the malicous code sticks around long after the source has been fixed.
+
+Any unescaped html is written to the page can be executed.
+
+Have a restrictive CSP, disallow inline scripts and 3rd party scripts except those which you trust. On browsers which support it a CSP will reduce the risk of XSS scripting but it is important to make sure all 3rd party content is escaped before rendered.
+
+Don't use .innerHTML, use .textContent
+
+> ```<a target="_blank" rel="noopener"></a>```
+>
+> * HTTPS
+> * HSTS
+> * CSP
+>
 
 <script>
 
