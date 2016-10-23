@@ -10,33 +10,89 @@ script: https://cdn.rawgit.com/AdaRoseEdwards/dirty-dom/v1.3.1/build/dirty-dom-l
 <!-- Link to trigger conversion script -->
 [Convert to Slide Deck](#aslides)
 
-## About me
+I am Ada Rose from Samsung Internet Developer Relations I am here to talk to you about Web Apps. Can I have a quick show of hands:
 
-I am ...
+* Who here is a web developer?
+* Who here develops native apps?
 
-Why do I like progressive web apps as a developer...
+I am aiming this talk at everyone as good web app requires designs from both.
+
+<script>window.setDynamicSlide(window.elByEl());</script>
 
 <!-- This slide uses information from _config.yml -->
-<blockquote class="dark" id="splash-slide" style="background-image: url('images/bird1.jpg');">
+<blockquote class="dark" style="background-image: url('images/bird1.jpg');">
+<div>
 <h1>{{ page.title }}</h1>
 <h3>{{ page.description }}</h3>
-<h2>{{site.author.name}} - {{site.author.company}}</h2>
+<h2>{{site.author.name}} - {{site.author.company}}
+<br />
+@lady_ada_king, @samsunginternet
+</h2>
+</div>
+<div>
+<h1>Samsung Internet</h1>
+<p>
+<img src="https://pbs.twimg.com/profile_images/787926197971935232/-0aIDbJ3.jpg" style="border-radius: 10%;" />
+</p>
+</div>
 </blockquote>
 
 ## Role of a web app
 
+The world of apps is like speed dating.
+
+* Many options
+* Huge variation in quality
+* All want a place in your phone
+
+The current state of apps is one where you can't experience them until you have downloaded them.
+
+Which is akin to being asked for your hand in marriage before you have even had one date.
+
+Customers have a pretty reasonable fear commitment so will likely be scared off.
+
+<b>The average user installs 0 apps per month.</b>
+
+By building a web app the user can try your website before deciding whether to keep it.
+
+Allowing you to gain that initial interaction and will continue to engage.
+
+<script>window.setDynamicSlide(window.elByEl());</script>
+
+<blockquote class="dark">
+<div>
+<p><img style="object-fit: cover;" src="images/1280px-Birds_on_the_wire_-_crop.jpg" /></p>
+<h3 style="font-size: 0.7em; font-weight: normal;">https://commons.wikimedia.org/wiki/File:Birds_on_the_wire_-_crop.jpg</h3>
+</div>
+<div>
+<p>
+<img style="object-fit: cover;" src="images/emu.jpg" />
+<img style="object-fit: cover;" src="images/peacock.jpg" />
+</p>
+</div>
+<div>
+<p><img style="object-fit: cover;" src="images/Nokia-300-angry-birds.jpg" /></p>
+<h3 style="font-size: 0.7em; font-weight: normal;">https://upload.wikimedia.org/wikipedia/commons/9/98/Nokia-300-angry-birds.jpg</h3>
+</div>
+<p>
+<img style="filter: invert(100%); -webkit-filter: invert(100%);" src="images/0.svg" /></p>
+</blockquote>
+
+## What is a progressive web app?
+
 An ideal web app fulfills the role of your responsive website as well as being your presence on the user's homescreen.
 
-You don't have the appstore getting in the way between your initial web presence and getting on the homescreen.
+The technology you choose to build it will depend on your product and your developers.
 
-## Buzzwords
+But there are a few buzzwords which apply to all progressive web apps
 
-* Responsive Design
-* Offline First
-* Progressive Enhancement
+* Responsive Design - They should work on a wide variety of screen layouts from desktop to mobile.
+* Offline First - They should present some content if the network fails. A blank screen or a browser error is not acceptable.
+* Progressive Enhancement - They should still make the content available on a wide variety of platforms which may not support all technology.
+
 
 <!-- This slide uses information from _config.yml -->
-<blockquote class="dark" id="splash-slide" style="background-image: url('images/bird2.jpg');">
+<blockquote class="dark" style="background-image: url('images/bird2.jpg');">
 <h1>What is a progressive web app?</h1>
 </blockquote>
 
@@ -47,7 +103,7 @@ You don't have the appstore getting in the way between your initial web presence
 * Small teams aiming at a wide variety of platforms with a single product, but still need a presence on the home screen. Non-profits especially due to fiscally eficient and high engagement.
 * Take advantage of the web's built in security and privacy powers, increase sharing and engagement, deploy in seconds rather than hours, strong developer eco system.
 
-<blockquote class="dark" id="splash-slide" style="background-image: url('images/bird3.jpg');">
+<blockquote class="dark" style="background-image: url('images/bird3.jpg');">
 <div>
 	<h1>Is a Web App right for you?</h1>
 	<h2>(It probably is)</h2>
@@ -60,17 +116,23 @@ You don't have the appstore getting in the way between your initial web presence
 
 * Each action in installing an app will cause users to drop off. By sending user's away from your website to an app store will get only small fraction of your users engaging with your product again.
 
-<blockquote class="dark" id="splash-slide" style="background-image: url('images/bird4.jpg');">
-<div><h1><i>
+* Push notifications can be used to bring users back to your web app. In a future date.
+
+* A place on the homescreen gives you a place in their mind.
+
+<script>window.setDynamicSlide(window.elByEl());</script>
+<blockquote class="dark" style="background-image: url('images/bird4.jpg'); font-size: 2em; font-weight: normal;">
+<div><h3><i>
 	“I’m not here to enter into a relationship. I just want to buy something.”
-</i></h1><h2>
+</i></h3><h4>
 	 Jared M. Spool - The $300 Million Button <br /> (https://articles.uie.com/three_hund_million_button/)
-</h2></div>
-<div><h1><i>
+</h4></div>
+<div>
+<h3><i>
 	“Research has shown that the UX of requiring an action creates a 20% fall off rate, which has a direct effect when you want to send your users away to an app store.”
-</i></h1><h2>
+</i></h3><h4>
 	 Remy Sharp - State of the gap <br /> (https://remysharp.com/2016/05/28/state-of-the-gap)
-</h2></div>
+</h4></div>
 </blockquote>
 
 ## When may a web app not be the best route?
@@ -78,10 +140,10 @@ You don't have the appstore getting in the way between your initial web presence
 * Do you need access to low level device apis not available through the web.
   * High End gaming
   * Bluetooth
-* Do you need to circumvent the web's security model. For your user's sake I hope not.
+* Do you need to circumvent the web's security model. (For your user's sake I hope not.)
   * The web platform tries to resist allowing APIs which could enable user tracking and privacy.
 
-<blockquote class="dark" id="splash-slide" style="background-image: url('images/bird5.jpg');">
+<blockquote class="dark" style="background-image: url('images/bird5.jpg');">
 <h1>Web Apps can't fulfill every app use case.</h1>
 </blockquote>
 
@@ -173,7 +235,7 @@ As browsers get more features they will recieve a better expereince.
 ## Accessible
 * Take advantage of the webs accessiblity by building syntactically
 
-<blockquote class="dark" id="splash-slide" style="background-image: url('images/bird5.jpg');">
+<blockquote class="dark" style="background-image: url('images/bird5.jpg');">
 <h1>What goes into a web app?</h1>
 </blockquote>
 
