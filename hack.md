@@ -218,6 +218,7 @@ None of these experiences are essential to the podcast experience but are enhanc
 * If push notifications are supported they can recieve push notifications when their podcasts update (52.59% of users)
 * If the audio element is supported they can play inline (96.85% of users)
 * If they have flexbox support they get a nicer layout (93.21% of users)
+* If the history api is supported I do single page web app behaviour (92.16% of users)
 
 It is okay for a user on iOS Safari because although there is no service worker so no offline or push notifications they still get a great experience regardless.
 
@@ -228,12 +229,42 @@ As browsers get more features they will recieve a better expereince.
 
 <blockquote class="dark" style="background-image: url('images/bird6.jpg');">
 <h1>Progressive Enhancement</h1>
+<ul>
+<li>indexedDB (93.8% of users)</li>
+
+<li>Service Workers (58.1% of users)</li>
+
+<li>Push Notifications (52.59% of users)</li>
+
+<li><code>&lt;audio&gt;</code> (96.85% of users)</li>
+
+<li>Flexbox (93.21% of users)</li>
+
+<li>History API (92.16% of users)</li>
+</ul>
+
+<small>Stats from caniuse for the UK</small>
+
 </blockquote>
 
 ## Interactions
-* Native App users have the expectation that interactions give immediate feedback and this expectation is expected of web apps too.
-* In this example I have intercepted all link clicks and form submits and handle them via ajax requests. Whilst the content loads I show dummy content to allow me to start an animation to disguise loading and present *something* whilst the network/cache request happens.
 
+Native App users have the expectation that interactions give immediate feedback and this is expected of web apps too.
+
+The traditional web hits the network for every single page load. This can take between 100s of milliseconds and 10s of seconds.
+
+Which is not suitable for a web app. By returning local data you can greatly speed up the time from the click to the page updating.
+
+It is probably a good idea to avoide refreshing the whole DOM too, just switching out the changed content you can give a seamless experience.
+
+There are many libraries and frameworks for building single page web apps.
+
+Dummy content can be used for transitions to give a feeling of instant loading.
+
+<script>window.setDynamicSlide(window.elByEl());</script>
+<blockquote class="dark" style="background-image: url('images/bird7.jpg');">
+<h1>Interactivity</h1>
+</blockquote>
 
 ## Preserving the benefits of the Web
 
@@ -246,7 +277,7 @@ Most likely you will choose to hide the URL bar for *'that appy feeling'*. This 
 ## Accessible
 * Take advantage of the webs accessiblity by building syntactically
 
-<blockquote class="dark" style="background-image: url('images/bird6.jpg');">
+<blockquote class="dark" style="background-image: url('images/nest.jpg');">
 <h1>What goes into a web app?</h1>
 </blockquote>
 
