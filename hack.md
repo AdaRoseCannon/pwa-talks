@@ -80,16 +80,23 @@ Allowing you to gain that initial interaction and will continue to engage.
 
 ## What is a progressive web app?
 
+A progressive web app is a web site which has certain <i>app-like</i> features such as:
+
+* On the homescreen
+* Can perform push notifications
+* Works offline
+* Has touch interactions which respond instantly
+
+Whilst maintaining <i>web-like</i> features such as
+
+* Cross platform
+* Fast loading
+* Deep linking
+* On the open web
+
 An ideal web app fulfills the role of your responsive website as well as being your presence on the user's homescreen.
 
 The technology you choose to build it will depend on your product and your developers.
-
-But there are a few buzzwords which apply to all progressive web apps
-
-* Responsive Design - They should work on a wide variety of screen layouts from desktop to mobile.
-* Offline First - They should present some content if the network fails. A blank screen or a browser error is not acceptable.
-* Progressive Enhancement - They should still make the content available on a wide variety of platforms which may not support all technology.
-
 
 <!-- This slide uses information from _config.yml -->
 <blockquote class="dark" style="background-image: url('images/bird2.jpg');">
@@ -151,15 +158,31 @@ But there are a few buzzwords which apply to all progressive web apps
 
 The best practises for web apps are a combination of the best practises for the web and the best practises for native apps.
 
+But there are a few buzzwords which apply to all progressive web apps
+
+* Responsive Design - They should work on a wide variety of screen layouts from desktop to mobile.
+* Offline First - They should present some content if the network fails. A blank screen or a browser error is not acceptable.
+* Progressive Enhancement - All of the features I listed above are now standardised as part of the web platform but are not implemented everywhere yet. Progressive enhancement allows your website to still provide your content if certain features are not present yet.
+
+<blockquote class="dark" style="background-image: url('images/bird8.jpg');">
+<h1>Some buzzwords</h1>
+<h2>Responsive Design</h2>
+<h2>Offline First</h2>
+<h2>Progressive Enhancement</h2>
+</blockquote>
+
+
 ## Responsive Design
-Been doing it for years but remember
+
+Since the advent of the mobile web this has been standard practise but I will refresh it quickly here, there are many great articles written on how to do responsive design well.s
 
 * Mobile First
 * No horizontal scrolling
 * Allow zooming in for accessiblity
 * must still work on the desktop
 
-> # Responsive design illustration
+> ![Responsive Design Illustration](images/responsive-design.jpg)
+> <div><small>https://en.wikipedia.org/wiki/File:Content-is-like-water-1980.jpg</small></div>
 
 ## Offline First
 * local databases e.g. idb -> pouch for syncing
@@ -169,17 +192,11 @@ Been doing it for years but remember
   * Store rarely changing resources to avoid repeat network events.
   * Speed up responses by providing cached content, then updating in the background.
 
-## Interactions
-* Native App users have the expectation that interactions give immediate feedback and this expectation is expected of web apps too.
-* In this example I have intercepted all link clicks and form submits and handle them via ajax requests. Whilst the content loads I show dummy content to allow me to start an animation to disguise loading and present *something* whilst the network/cache request happens.
 
-## Preserving the benefits of the Web
-
-Most likely you will choose to hide the URL bar for *'that appy feeling'*. This means that a whole bunch of benefits inherent to the tradional web are lost and need to be reimplemented.
-
-* URLs provide some method of deep linking and sharing for your site. Otherwise you will loose the virality of web content.
-* Network conditions and load failures. Won't be as visible handle these and assist your user.
-* Probably want to opem 3rd party urls in a new browser tab
+<script>window.setDynamicSlide(window.playVideo);</script>
+<blockquote style="background: #f8f6f8;">
+<video src="images/dino.m4v" autoplay="true" muted></video>
+</blockquote>
 
 ## Progressive Enhancement
 
@@ -194,35 +211,13 @@ This can be accomplished with just HTML forms and links. So that is my base func
 
 I provide some progressive enhancements (stats for the UK from caniuse)
 
-* If indexeddb is supported I store their preferences (93.8% of users)
-* If service workers are supported they can go offline (58.1% of users)
-
-## Progressive Enhancement
-
-Not all app-like features are supported by all browsers it is up to you to decide what is important and what is not.
-
-* Work out minimum functionality and 'must have' features
-* Decide how to support them, provide a polyfill, a fallback, no feature or deny that user any content.
-* Long tail of the web so more work less gain
-
-E.g. For Podle the base functionality is searching for and playing podcasts.
-This can be accomplished with just HTML forms and links. So that is my base functionality.
-
-I provide some progressive enhancements (stats for the UK from caniuse)
+None of these experiences are essential to the podcast experience but are enhancements.
 
 * If indexeddb is supported I store their preferences (93.8% of users)
 * If service workers are supported they can go offline (58.1% of users)
 * If push notifications are supported they can recieve push notifications when their podcasts update (52.59% of users)
 * If the audio element is supported they can play inline (96.85% of users)
 * If they have flexbox support they get a nicer layout (93.21% of users)
-
-None of these experiences are essential to the podcast experience but are enhancements.
-
-* If push notifications are supported they can recieve push notifications when their podcasts update (52.59% of users)
-* If the audio element is supported they can play inline (96.85% of users)
-* If they have flexbox support they get a nicer layout (93.21% of users)
-
-None of these experiences are essential to the podcast experience but are enhancements.
 
 It is okay for a user on iOS Safari because although there is no service worker so no offline or push notifications they still get a great experience regardless.
 
@@ -231,11 +226,27 @@ As browsers get more features they will recieve a better expereince.
 * Not all browsers support push notifications that is okay
 * Not all browsers support service workers that is okay
 
+<blockquote class="dark" style="background-image: url('images/bird6.jpg');">
+<h1>Progressive Enhancement</h1>
+</blockquote>
+
+## Interactions
+* Native App users have the expectation that interactions give immediate feedback and this expectation is expected of web apps too.
+* In this example I have intercepted all link clicks and form submits and handle them via ajax requests. Whilst the content loads I show dummy content to allow me to start an animation to disguise loading and present *something* whilst the network/cache request happens.
+
+
+## Preserving the benefits of the Web
+
+Most likely you will choose to hide the URL bar for *'that appy feeling'*. This means that a whole bunch of benefits inherent to the tradional web are lost and need to be reimplemented.
+
+* URLs provide some method of deep linking and sharing for your site. Otherwise you will loose the virality of web content.
+* Network conditions and load failures. Won't be as visible handle these and assist your user.
+* Probably want to opem 3rd party urls in a new browser tab
 
 ## Accessible
 * Take advantage of the webs accessiblity by building syntactically
 
-<blockquote class="dark" style="background-image: url('images/bird5.jpg');">
+<blockquote class="dark" style="background-image: url('images/bird6.jpg');">
 <h1>What goes into a web app?</h1>
 </blockquote>
 
