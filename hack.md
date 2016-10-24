@@ -204,11 +204,40 @@ Since the advent of the mobile web this has been standard practise but I will re
   * Store rarely changing resources to avoid repeat network events.
   * Speed up responses by providing cached content, then updating in the background.
 
+**The power of Service Workers**
+
+*Who here is a ware of service workers?*
+
+The service worker is a special type of web worker. It runs in the background and can intercept network requests.
+
+In conjunction with the Cache api service worker can serve resources from the Cache to allow it to work offline.
+
+You can use it to speed up requests or sync data in the background.
+
+They also allow new apis which don't rely on a window being present.
+
+One of these is
 
 <script>window.setDynamicSlide(window.playVideo);</script>
 <blockquote style="background: #f8f6f8;">
 <video src="images/dino.m4v" autoplay="true" muted></video>
 </blockquote>
+
+## Push notifications
+
+Push notifications have been a greatly requested feature to the web.
+
+It is one of the major powers of native apps and is not available in many web browsers.
+
+Push notifications have two major features.
+
+1. They allow you to re-engage the user to bring them back to your app.
+2. They allow you to interact with the user without them having to open the app up. This pattern is beinging to be known as the headless web. The convienience will keep the user coming back.
+
+By keeping push notifications relelvant and timely they will be a great boon.
+
+> # Example of a push notification
+> ![Push Notification](images/notification.png)
 
 ## Progressive Enhancement
 

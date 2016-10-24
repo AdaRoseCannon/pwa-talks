@@ -305,7 +305,7 @@ window.getSlideName = function (el) {
 	if (el.matches('script[id]')) {
 		name = genId(el.id);
 	} else {
-		var hs = el.prevAll().filter(function (el) {
+		var hs = prevAll(el).filter(function (el) {
 			return el.tagName.match(/h[0-6]/i);
 		});
 		if (!hs.length) throw 'No h to find';
