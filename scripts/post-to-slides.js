@@ -6,6 +6,19 @@
  * amazing right!!
  */
 
+'use strict';
+
+// Load the service worker which does not have push notification support.
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('sw.js', { scope: './' })
+	.then(function(reg) {
+		console.log('sw registered', reg);
+	}).catch(function(error) {
+		console.log('sw registration failed with ' + error);
+	});
+}
+
+
 function addStyle(url){
 	var styles = document.createElement('link');
 	styles.rel = 'stylesheet';

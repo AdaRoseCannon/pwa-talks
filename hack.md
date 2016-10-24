@@ -37,6 +37,19 @@ I am aiming this talk at everyone as good web app requires designs from both.
 </div>
 </blockquote>
 
+## A quick example of a Web App
+
+Browsers are still experimenting with the design language behind  installing progressive web apps.
+
+Samsung Internet, Chrome and Opera will prompt the user when a few heuristics are fulfilled.
+
+<!-- This slide uses information from _config.yml -->
+<script>window.setDynamicSlide(window.playVideo);</script>
+<blockquote class="dark">
+<h1>A quick example of a web app:</h1>
+<video src="images/add-to-homescreen.mp4" autoplay="true" muted></video>
+</blockquote>
+
 ## Role of a web app
 
 The world of apps is like speed dating.
@@ -78,7 +91,7 @@ Allowing you to gain that initial interaction and will continue to engage.
 <img style="filter: invert(100%); -webkit-filter: invert(100%);" src="images/0.svg" /></p>
 </blockquote>
 
-## What is a progressive web app?
+## What makes up a progressive web app?
 
 A progressive web app is a web site which has certain <i>app-like</i> features such as:
 
@@ -98,11 +111,8 @@ An ideal web app fulfills the role of your responsive website as well as being y
 
 The technology you choose to build it will depend on your product and your developers.
 
-<!-- This slide uses information from _config.yml -->
-<script>window.setDynamicSlide(window.playVideo);</script>
 <blockquote class="dark" style="background-image: url('images/bird2.jpg');">
-<h1>What is a progressive web app?</h1>
-<video src="images/podle-demo.webm" autoplay="true" muted></video>
+<h1>What makes up a progressive web app?</h1>
 </blockquote>
 
 ## Is a progressive web app right for you?
@@ -250,6 +260,41 @@ As browsers get more features they will recieve a better expereince.
 
 </blockquote>
 
+## Getting an Icon on the homescreen
+
+This is what one might consider the most appy feature.
+
+<script>window.setDynamicSlide(window.elByEl());</script>
+<blockquote class="dark" style="background-image: url('images/bird9.jpg');">
+<h1>Web App Manifest</h1>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"theme-color"</span> <span class="na">content=</span><span class="s">"#4E3F30"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"manifest"</span> <span class="na">href=</span><span class="s">"/static/manifest.json"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://podle.ada.is/static/icon192.png"</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">sizes=</span><span class="s">"192x192"</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Podle"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"icons"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+	</span><span class="p">{</span><span class="w">
+		</span><span class="nt">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/static/icon192.png"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"sizes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"192x192"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image/png"</span><span class="w">
+	</span><span class="p">},</span><span class="w">
+	</span><span class="p">{</span><span class="w">
+		</span><span class="nt">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/static/icon512.png"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"sizes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"512x512"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image/png"</span><span class="w">
+	</span><span class="p">}</span><span class="w">
+</span><span class="p">],</span><span class="w">
+	</span><span class="nt">"start_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v7/"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"standalone"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"background_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"theme_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#4E3F30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+</blockquote>
+
 ## Interactions
 
 Native App users have the expectation that interactions give immediate feedback and this is expected of web apps too.
@@ -267,7 +312,7 @@ In the demo behind me I artificially throttled the network connection to demonst
 It can be difficult to do this oneself, there are many libraries and frameworks for building single page web apps.
 
 <script>window.setDynamicSlide(window.playVideo);</script>
-<blockquote class="dark" style="background-image: url('images/bird7.jpg');">
+<blockquote class="dark">
 <h1>Interactivity</h1>
 <video src="images/podle-demo.webm" autoplay="true" loop muted></video>
 </blockquote>
@@ -284,11 +329,16 @@ Most likely you will choose to hide the URL bar for *'that appy feeling'*. This 
 > ![Podle in Browser](images/in-browser.png)
 > ![Podle in Standalone](images/in-standalone.png)
 
-## Accessible
-* Take advantage of the webs accessiblity by building syntactically
+## Accessiblity
 
-<blockquote class="dark" style="background-image: url('images/nest.jpg');">
-<h1>What goes into a web app?</h1>
+The web starts you off 90% of the way to a great accessible site.
+
+It can be navigate with a myriad of input devices.
+
+It can be read by lots of devices which are not screens.
+
+<blockquote class="dark" style="background-image: url('images/bird7.jpg');">
+<h1>Accessiblity</h1>
 </blockquote>
 
 ## Security
@@ -311,6 +361,20 @@ Don't use .innerHTML, use .textContent
 > * HSTS
 > * CSP
 >
+
+In conclusion, The benefits in building a web app are great.
+
+By letting the users date your app before they commit to adding it to their device.
+
+There are a wide list of features to make a site more appy but
+
+the web has a rich eco system of tools to enable the production of web apps.
+
+The most difficult parts will be picking the right tools and libraries to fit your team and your project.
+
+<blockquote class="dark" style="background-image: url('images/nest.jpg');">
+<h1>Thank you</h1>
+</blockquote>
 
 <script>
 
