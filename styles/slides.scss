@@ -17,10 +17,14 @@
 		display: none;
 	}
 }
-.a-slides_slide {
+
+.a-slides_slide.active ~ .a-slides_slide {
 	display: none;
 }
-.a-slides_slide.active, .a-slides_slide.active + .a-slides_slide{
+
+.a-slides_slide.active,
+.a-slides_slide.active + .a-slides_slide
+{
 	display: block;
 }
 

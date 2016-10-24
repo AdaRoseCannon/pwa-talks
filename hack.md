@@ -118,6 +118,7 @@ The technology you choose to build it will depend on your product and your devel
 ## Is a progressive web app right for you?
 
 Do you need:
+
 * High engagement, you can engage from the first click so low barrier of entry.
 * Short term or one off uses, providing tickets or event information.
 * Data collection, can be used offline and online.
@@ -125,6 +126,7 @@ Do you need:
 * VR and Gaming get 'em hooked early
 
 Also useful if:
+
 * Small teams aiming at a wide variety of platforms with a single product, but still need a presence on the home screen. Non-profits especially due to fiscally eficient and high engagement.
 * Take advantage of the web's built in security and privacy powers, increase sharing and engagement, deploy in seconds rather than hours, strong developer eco system.
 
