@@ -176,7 +176,7 @@ Also useful if:
 
 The best practises for web apps are a combination of the best practises for the web and the best practises for native apps.
 
-But there are a few buzzwords which apply to all progressive web apps
+But there are a few buzzwords which should apply to all progressive web apps
 
 * Responsive Design - They should work on a wide variety of screen layouts from desktop to mobile.
 * Offline First - They should present some content if the network fails. A blank screen or a browser error is not acceptable.
