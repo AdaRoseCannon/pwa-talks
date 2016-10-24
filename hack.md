@@ -99,8 +99,10 @@ An ideal web app fulfills the role of your responsive website as well as being y
 The technology you choose to build it will depend on your product and your developers.
 
 <!-- This slide uses information from _config.yml -->
+<script>window.setDynamicSlide(window.playVideo);</script>
 <blockquote class="dark" style="background-image: url('images/bird2.jpg');">
 <h1>What is a progressive web app?</h1>
+<video src="images/podle-demo.webm" autoplay="true" muted></video>
 </blockquote>
 
 ## Is a progressive web app right for you?
@@ -229,6 +231,7 @@ As browsers get more features they will recieve a better expereince.
 
 <blockquote class="dark" style="background-image: url('images/bird6.jpg');">
 <h1>Progressive Enhancement</h1>
+<h2>Not all users can use all features.</h2>
 <ul>
 <li>indexedDB (93.8% of users)</li>
 
@@ -243,7 +246,7 @@ As browsers get more features they will recieve a better expereince.
 <li>History API (92.16% of users)</li>
 </ul>
 
-<small>Stats from caniuse for the UK</small>
+<small>Stats from caniuse for the UK October 2016</small>
 
 </blockquote>
 
@@ -257,13 +260,16 @@ Which is not suitable for a web app. By returning local data you can greatly spe
 
 It is probably a good idea to avoide refreshing the whole DOM too, just switching out the changed content you can give a seamless experience.
 
-There are many libraries and frameworks for building single page web apps.
-
 Dummy content can be used for transitions to give a feeling of instant loading.
 
-<script>window.setDynamicSlide(window.elByEl());</script>
+In the demo behind me I artificially throttled the network connection to demonstrate the dummy content.
+
+It can be difficult to do this oneself, there are many libraries and frameworks for building single page web apps.
+
+<script>window.setDynamicSlide(window.playVideo);</script>
 <blockquote class="dark" style="background-image: url('images/bird7.jpg');">
 <h1>Interactivity</h1>
+<video src="images/podle-demo.webm" autoplay="true" loop muted></video>
 </blockquote>
 
 ## Preserving the benefits of the Web
@@ -273,6 +279,10 @@ Most likely you will choose to hide the URL bar for *'that appy feeling'*. This 
 * URLs provide some method of deep linking and sharing for your site. Otherwise you will loose the virality of web content.
 * Network conditions and load failures. Won't be as visible handle these and assist your user.
 * Probably want to opem 3rd party urls in a new browser tab
+* If you make a single page web app it can be easy to break deep linking ensure users can link to any content in your website.
+
+> ![Podle in Browser](images/in-browser.png)
+> ![Podle in Standalone](images/in-standalone.png)
 
 ## Accessible
 * Take advantage of the webs accessiblity by building syntactically
