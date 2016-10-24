@@ -47,7 +47,7 @@ Samsung Internet, Chrome and Opera will prompt the user when a few heuristics ar
 <script>window.setDynamicSlide(window.playVideo);</script>
 <blockquote class="dark">
 <h1>A quick example of a web app:</h1>
-<video src="images/add-to-homescreen.mp4" autoplay="true" muted></video>
+<video src="images/add-to-homescreen.m4v" autoplay="true" muted></video>
 </blockquote>
 
 ## Role of a web app

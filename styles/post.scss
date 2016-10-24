@@ -212,6 +212,22 @@ footer {
 	img, video {
 		max-width: 300px !important;
 		max-height: 300px !important;
+	}
+
+	.slide-view-button {
+		display: none;
+	}
+}
+@media print {
+	*, .dark {
+		background: white !important;
+		color: black !important;
+		border-color: #eee !important;
+	}
+
+	img, video {
+		max-width: 300px !important;
+		max-height: 300px !important;
 		filter: sepia() hue-rotate(120deg) contrast(0.6);
 	}
 
