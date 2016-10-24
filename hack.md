@@ -37,7 +37,7 @@ I am aiming this talk at everyone as good web app requires designs from both.
 </div>
 </blockquote>
 
-## A quick example of a Web App
+## A quick example install of a Web App
 
 Browsers are still experimenting with the design language behind  installing progressive web apps.
 
@@ -60,7 +60,7 @@ The world of apps is like speed dating.
 
 The current state of apps is one where you can't experience them until you have downloaded them.
 
-Which is akin to being asked for your hand in marriage before you have even had one date.
+Which is akin to being asked for commitment before you have even had one date.
 
 Customers have a pretty reasonable fear commitment so will likely be scared off.
 
@@ -117,8 +117,14 @@ The technology you choose to build it will depend on your product and your devel
 
 ## Is a progressive web app right for you?
 
-* Do you need
-* Ideal use cases: Documents, media streaming, retail (mention web payment apis), communication, low-mid end gaming, VR, need easy sharing i.e. trying to go viral.
+Do you need:
+* High engagement, you can engage from the first click so low barrier of entry.
+* Short term or one off uses, providing tickets or event information.
+* Data collection, can be used offline and online.
+* Retail - Web Payment APIs
+* VR and Gaming get 'em hooked early
+
+Also useful if:
 * Small teams aiming at a wide variety of platforms with a single product, but still need a presence on the home screen. Non-profits especially due to fiscally eficient and high engagement.
 * Take advantage of the web's built in security and privacy powers, increase sharing and engagement, deploy in seconds rather than hours, strong developer eco system.
 
@@ -403,6 +409,9 @@ The most difficult parts will be picking the right tools and libraries to fit yo
 
 <blockquote class="dark" style="background-image: url('images/nest.jpg');">
 <h1>Thank you</h1>
+<h2>I have written in more in depth on progressive web apps, search for:<br />
+<i>Building Blocks of Progresive Web Apps, Smashing Mag</i>
+</h2>
 </blockquote>
 
 <script>
