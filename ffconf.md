@@ -70,10 +70,40 @@ There are many other benefits to being web like which the current trend of reimp
 <p><img src="images/spacejam.png" /></p>
 </blockquote>
 
+## The web is based on Standards
+
+The web is based on agreed upon standards this both a strength and a weakness.
+
+The weakness is that new practises and technology take a long time to reach the web.
+
+This is because each standard is often hotly debated to ensure that is is:
+
+* security
+* privacy
+* accessibility
+* extensibility
+* implementability
+* performance
+
+This weakness becomes it's strength in the long term:
+
+Years down the line this usually pays off as it maintains some of the fundamental goals of the web:
+
+<script>window.setDynamicSlide(window.elByEl());</script>
+<blockquote class="dark" style="background-image: url('images/bird10.jpg');">
+<h1 style="text-align: center;">The web is based on Standards</h1>
+<h1><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Security!</span></h1>
+<h1><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Privacy!</span></h1>
+<h1><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Accessibility!</span></h1>
+<h1><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Extensibility!</span></h1>
+<h1><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Implementability!</span></h1>
+<h1><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Performance!</span></h1>
+</blockquote>
+
+
+
 ## Lovely Web Features
 
-> ## WHO HERE LOVES THE WEB?!
->
 > * Low Barrier to Entry to get started making
 > * Can load new content fast!
 > * Deep linking and URL Sharing
@@ -103,6 +133,8 @@ Allowing you to have your cake and eat it too!!
 <p><img src="images/native-responses.jpg"></img></p>
 </blockquote>
 
+> # Attributions
+> * Mocking Bird Argument - https://commons.wikimedia.org/wiki/File:Mocking_Bird_Argument.jpg?uselang=en-gb
 
 <script>
 
