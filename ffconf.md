@@ -100,9 +100,27 @@ Years down the line this usually pays off as it maintains some of the fundamenta
 <h1><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Performance!</span></h1>
 </blockquote>
 
-
-
 ## Lovely Web Features
+
+* The web is designed so that sites can be made without specialised knowlege of specific platforms.
+* It's designed to be fast on low performance devices.
+ * Animates fast
+ * Start fast
+* Can be interpreted to work anywhere
+ * Desktop Computers
+ * TVs
+ * Phones
+ * Screen Readers
+ * Braille display
+ * Virtual Reality
+ * Terminals
+* More accessible to a very wide audience
+* Content is not locked to a single manufacturers product
+* Content is usually available equally anywhere in the world.
+* Security and Privacy have extremely high priority as it is a huge attack target.
+* Designed to work now and in many years, we don't break the web. Very few APIs get deprecated. `<blink>` :tear:
+* It is also extensible so if you want you can throw all that loveliness away and rebuild the web platform in JavaScript. :trashcan:
+
 
 > * Low Barrier to Entry to get started making
 > * Can load new content fast!
@@ -113,6 +131,8 @@ Years down the line this usually pays off as it maintains some of the fundamenta
 > * Content is not locked to a particular platform
 > * Content is equally available around the world
 > * User Security and Privacy have a high priority
+> * Reliable across many years
+> * Extensible so that you can throw it all away do it yourself.
 
 ## What about native apps?
 
