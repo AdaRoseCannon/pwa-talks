@@ -93,7 +93,7 @@ function genId(name) {
 
 function init() {
 	return Promise.all([
-			addScript('https://cdn.rawgit.com/AdaRoseEdwards/a-slides/v1.4.0/build/a-slides.js').promise
+			addScript('./scripts/third-party/a-slides.js').promise
 	])
 	.then(function () {
 
@@ -274,28 +274,26 @@ window.elByEl = function () {
 	}
 
 	var out = {};
+	var setUpFirstEl;
 
 	function init() {
-		if (!children) {
-			children = Array.from(this.children);
-			var target = this;
-			clone = children.map(function (el) {
-				return function () { replaceWithEl(el, this) };
-			}.bind(this));
-			clone.push(function () {});
-			out.action = window.FakeGenerator(clone);
-		}
+		children = Array.from(this.children);
+		var target = this;
+		clone = children.map(function (el) {
+			return function () { replaceWithEl(el, this) };
+		}.bind(this));
+		if (!clone.length) throw Error('Empty elByEl target');
+		setUpFirstEl = clone.shift();
+		clone.unshift(function () {});
+		clone.push(function () {});
+		out.action = window.FakeGenerator(clone);
 	}
 
-	out.setup = function () {
-		init.bind(this)();
+	out.teardown = out.setup = function () {
+		if (!children) init.bind(this)();
 		this.innerHTML = '';
+		setUpFirstEl.bind(this)();
 	};
-
-	out.teardown = function () {
-		init.bind(this)();
-		this.innerHTML = '';
-	}
 
 	return out;
 };

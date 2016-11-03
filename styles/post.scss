@@ -20,6 +20,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;
 }
 
+h1 {
+	font-weight: 700;
+}
+
 a {
 	color: #336ACE;
 }
@@ -68,7 +72,7 @@ body.post {
 
 	& > h1:first-of-type {
 		border-bottom: 1px solid #ccc;
-		background: url(/images/pattern.svg);
+		background: url(../images/pattern.svg);
 		background-size: cover;
 		margin: 0 0 1em 0;
 		padding: 2em 1em 1em 1em;

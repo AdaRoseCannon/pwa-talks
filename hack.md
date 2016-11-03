@@ -2,7 +2,6 @@
 layout: post
 title: Building Web Apps
 description:  Building apps in the web for increased reach and conversions. - presented at Women Hack for Non-profits
-script: https://cdn.rawgit.com/AdaRoseEdwards/dirty-dom/v1.3.1/build/dirty-dom-lib.min.js
 ---
 
 # {{page.title}}
