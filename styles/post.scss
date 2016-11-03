@@ -212,6 +212,7 @@ footer {
 	img, video {
 		max-width: 300px !important;
 		max-height: 300px !important;
+		filter: sepia() hue-rotate(120deg) contrast(0.6);
 	}
 
 	.slide-view-button {

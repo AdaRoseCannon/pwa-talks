@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Building Web Apps
-description:  Building apps in the web for increased reach and conversions. - presented at Women Hack for Non-profits
+title: Progressive Web Apps
+description: Bringing the power of the Web to Apps - Presented at FFConf
 script: https://cdn.rawgit.com/AdaRoseEdwards/dirty-dom/v1.3.1/build/dirty-dom-lib.min.js
 ---
 
@@ -14,8 +14,6 @@ I am Ada Rose from Samsung Internet Developer Relations I am here to talk to you
 
 * Who here is a web developer?
 * Who here develops native apps?
-
-I am aiming this talk at everyone as good web app requires designs from both.
 
 <script>window.setDynamicSlide(window.elByEl());</script>
 
@@ -39,8 +37,6 @@ I am aiming this talk at everyone as good web app requires designs from both.
 
 ## A quick example install of a Web App
 
-Browsers are still experimenting with the design language behind  installing progressive web apps.
-
 Samsung Internet, Chrome and Opera will prompt the user when a few heuristics are fulfilled.
 
 <!-- This slide uses information from _config.yml -->
@@ -50,69 +46,45 @@ Samsung Internet, Chrome and Opera will prompt the user when a few heuristics ar
 <video src="images/add-to-homescreen.m4v" autoplay="true" muted></video>
 </blockquote>
 
-## Role of a web app
+## Lovely Web Features
 
-The world of apps is like speed dating.
+*Who here loves the web?*
 
-* Many options
-* Huge variation in quality
-* All want a place in your phone
+(Cheers?)
 
-The current state of apps is one where you can't experience them until you have downloaded them.
+Idon't really need to seel you guys on the web we know how the web can be amazing
 
-Which is akin to being asked for commitment before you have even had one date.
+Of course you do, the modern web has these amazing properties:
 
-Customers have a pretty reasonable fear commitment so will likely be scared off.
+> ## WHO HERE LOVES THE WEB?!
+>
+> * Low Barrier to Entry to get started making
+> * Can load new content fast!
+> * Deep linking and URL Sharing
+> * Responsive so works across many devices
+> * Accessible so works for many people
+> * Can be reformatted so that it works on new devices.
+> * Content is not locked to a particular platform
+> * Content is equally available around the world
+> * User Security and Privacy have a high priority
 
-<b>The average user installs 0 apps per month.</b>
+## What about native apps?
 
-By building a web app the user can try your website before deciding whether to keep it.
+Last week I was speaking at Moz Fest and we asked the audience for what they loved most about native platforms on iOS and Android
 
-Allowing you to gain that initial interaction and will continue to engage.
+Here were their responses:
 
-<script>window.setDynamicSlide(window.elByEl());</script>
+* Blah....
 
-<blockquote class="dark">
-<div>
-<p><img style="object-fit: cover;" src="images/1280px-Birds_on_the_wire_-_crop.jpg" /></p>
-<h3 style="font-size: 0.7em; font-weight: normal;">https://commons.wikimedia.org/wiki/File:Birds_on_the_wire_-_crop.jpg</h3>
-</div>
-<div>
-<p>
-<img style="object-fit: cover;" src="images/emu.jpg" />
-<img style="object-fit: cover;" src="images/peacock.jpg" />
-</p>
-</div>
-<div>
-<p><img style="object-fit: cover;" src="images/Nokia-300-angry-birds.jpg" /></p>
-<h3 style="font-size: 0.7em; font-weight: normal;">https://upload.wikimedia.org/wikipedia/commons/9/98/Nokia-300-angry-birds.jpg</h3>
-</div>
-<p>
-<img style="filter: invert(100%); -webkit-filter: invert(100%);" src="images/0.svg" /></p>
-</blockquote>
+Today I would like to show many of you how these native-like features are no longer tied to native platform
 
-## What makes up a progressive web app?
+And are available to use to build apps in the web today.
 
-A progressive web app is a web site which has certain <i>app-like</i> features such as:
-
-* On the homescreen
-* Can perform push notifications
-* Works offline
-* Has touch interactions which respond instantly
-
-Whilst maintaining <i>web-like</i> features such as
-
-* Cross platform
-* Fast loading
-* Deep linking
-* On the open web
-
-An ideal web app fulfills the role of your responsive website as well as being your presence on the user's homescreen.
-
-The technology you choose to build it will depend on your product and your developers.
+Allowing you to have your cake and eat it too!!
 
 <blockquote class="dark" style="background-image: url('images/bird2.jpg');">
-<h1>What makes up a progressive web app?</h1>
+<h1>What about native apps?</h1>
+<p><img src="images/native-responses.jpg"></img></p>
 </blockquote>
 
 ## Is a progressive web app right for you?
