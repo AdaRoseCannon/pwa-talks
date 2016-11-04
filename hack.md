@@ -2,6 +2,13 @@
 layout: post
 title: Building Web Apps
 description:  Building apps in the web for increased reach and conversions. - presented at Women Hack for Non-profits
+scripts: [
+	'scripts/post-to-slides.js',
+	'scripts/slide-utils.js',
+]
+styles: [
+	'scripts/third-party/a-slides.css',
+]
 ---
 
 # {{page.title}}

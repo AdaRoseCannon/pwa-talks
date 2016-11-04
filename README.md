@@ -2,17 +2,22 @@
 layout: post
 title: Readme
 description: Building a slide deck from a single page
-script: https://cdn.rawgit.com/AdaRoseEdwards/dirty-dom/v1.3.1/build/dirty-dom-lib.min.js
+scripts: [
+	'https://cdn.rawgit.com/AdaRoseEdwards/dirty-dom/v1.3.1/build/dirty-dom-lib.min.js',
+	'scripts/post-to-slides.js',
+	'scripts/slide-utils.js',
+]
+styles: [
+	'scripts/third-party/a-slides.css',
+]
 ---
 
-# {{ title }}
+# {{page.title}}
 
 This is a little layout for blog posts which can turn into slides using a-slides
 
 <!-- Link to trigger conversion script -->
 [Convert to Slide Deck](#aslides)
-
-# {{page.title}}
 
 ```bash
 sudo apt-get install bundler zlib1g-dev libxml2-dev nodejs

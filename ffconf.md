@@ -2,6 +2,13 @@
 layout: post
 title: Progressive Web Apps
 description: Keeping the web in Web Apps
+scripts: [
+	'scripts/post-to-slides.js',
+	'scripts/slide-utils.js',
+]
+styles: [
+	'scripts/third-party/a-slides.css',
+]
 ---
 
 # {{page.title}}
@@ -90,6 +97,7 @@ This weakness becomes it's strength in the long term:
 Years down the line this usually pays off as it maintains some of the fundamental goals of the web:
 
 <script>window.setDynamicSlide(window.elByEl());</script>
+
 <blockquote class="dark" style="background-image: url('images/bird10.jpg');">
 <h1 style="text-align: center;">The web is based on Standards</h1>
 <h1><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Security!</span></h1>
@@ -102,10 +110,12 @@ Years down the line this usually pays off as it maintains some of the fundamenta
 
 ## Lovely Web Features
 
-* The web is designed so that sites can be made without specialised knowlege of specific platforms.
+* Ease of use - The web is designed so that sites can be made without specialised knowlege of specific platforms.
+
 * It's designed to be fast on low performance devices.
- * Animates fast
- * Start fast
+ * Animates fast - 60FPS
+ * Start fast so users can engage with your content before downloading is finished
+
 * Can be interpreted to work anywhere
  * Desktop Computers
  * TVs
@@ -117,30 +127,114 @@ Years down the line this usually pays off as it maintains some of the fundamenta
 * More accessible to a very wide audience
 * Content is not locked to a single manufacturers product
 * Content is usually available equally anywhere in the world.
+
+* URLs Enable Sharing, this string of characters has meaning and people know what to do with it.
+* They know how to share a web page because it has a url associated with it
+
 * Security and Privacy have extremely high priority as it is a huge attack target.
-* Designed to work now and in many years, we don't break the web. Very few APIs get deprecated. `<blink>` :tear:
+
+* Designed to work now and in many years, we don't break the web.
+* Very few APIs get deprecated. `<blink>` :tear:
+
 * It is also extensible so if you want you can throw all that loveliness away and rebuild the web platform in JavaScript. :trashcan:
 
+These lovely feaures only come out of lots of work and debate put in amongst standards bodies.
 
-> * Low Barrier to Entry to get started making
-> * Can load new content fast!
-> * Deep linking and URL Sharing
-> * Responsive so works across many devices
-> * Accessible so works for many people
-> * Can be reformatted so that it works on new devices.
-> * Content is not locked to a particular platform
-> * Content is equally available around the world
-> * User Security and Privacy have a high priority
-> * Reliable across many years
-> * Extensible so that you can throw it all away do it yourself.
+<script>window.setDynamicSlide(window.elByEl());</script>
+
+> > ```html
+> > <html>
+> > 	<head>
+> > 		<title>My first website!</title>
+> > 	</head>
+> > 	<body>
+> > 		<h1>About Me!</h1>
+> > 		<a href="https://example.com/cats.html">I love cats!!</a>
+> > 		<img src="cat.jpg" alt="My wonderful cat!!!" />
+> > 	</body>
+> > </html>
+> > ```
+>
+> > <h1 style="font-size: 120px;">⏱</h1>
+> > ![60FPS](images/timeline.png)
+>
+> Device Wall
+>
+> <span style="font-size: 50vw; display: flex; align-content: center; justify-content: center; align-items: center; flex-grow: 1;">🌎🌍🌏</span>
+>
+> <span style="font-size: 120px; display: flex; align-content: center; justify-content: center; align-items: center; flex-grow: 1;">https://</span>
+>
+> <span style="font-size: 50vw; display: flex; align-content: center; justify-content: center; align-items: center; flex-grow: 1;">😎🔐</span>
+>
+> > ![First Website](images/first-website.png)
+> >
+> > ### http://info.cern.ch/hypertext/WWW/TheProject.html
+>
+> <span style="font-size: 120px; display: flex; align-content: center; justify-content: center; align-items: center; flex-grow: 1;">&lt;blink&gt; 😢</span>
+>
+> <span style="font-size: 50vw; display: flex; align-content: center; justify-content: center; align-items: center; flex-grow: 1;">🗑</span>
+
+## The Web Platform Responds to Trends When they Are No Longer Fashionable
+
+The advent of smartphones hailed the beginning of a new era of the web.
+
+The World Wide Web was available on a handheld device with incredible market penetration.
+
+So the first thing content providers do is invent `m.` websites to cut off those devices from the desktop web.
+
+Which wasn't ver webby at all.
+
+Eventually we rembered that the same website could be shipped to a wide variety of devices and fit accordingly and a new era of responsive design was born.
+
+
+
+In 2011 apple introduced a concept called safe to home screen for iOS Safari.
+
+This simple concept launched the idea that one could make phone formatted websites
+
+which could be indistinguishable from native apps.
+
+In 2011 this was very difficult there were lots of browser inconsistencies.
+
+Old and difficult apis were required for offline support.
+
+
+Since then there has been a huge drive for interoperability between the browser manufacturers. Yay!!
+
+
+The idea behind delivering apps via the web kinda stuck around, it's too lovely of an experience to let disapear.
+
+New APIs were forged in the fires of mountainview and in 2014 the Service Worker was born.
+
+<script>window.setDynamicSlide(window.elByEl());</script>
+
+> `http://m.blah.com` 😢
+>
+> ![Responsive Design Illustration](images/responsive-design.jpg)
+> ## https://en.wikipedia.org/wiki/File:Content-is-like-water-1980.jpg
+>
+> ![XKCD 1367 - Web Apps](images/installing.png)
+> ## https://xkcd.com/1367/
+>
+> ![Where it all began](the-beginning.png)
+
+This spawned a revolution in
 
 ## What about native apps?
+
+Now i have spoken at length about the power of the web what about native
+
+After all
 
 Last week I was speaking at Moz Fest and we asked the audience for what they loved most about native platforms on iOS and Android
 
 Here were their responses:
 
-* Blah....
+* Integrated UI
+* Offline Capable
+* Push Notifications
+* Performant
+* Sellable
 
 Today I would like to show many of you how these native-like features are no longer tied to native platform
 
@@ -148,18 +242,66 @@ And are available to use to build apps in the web today.
 
 Allowing you to have your cake and eat it too!!
 
+## Building these features
+
+
+
+## It's a lot of work and APIs to wrangle
+
+Easy to throw away what makes the web Lovely
+
+## Focus on writing HTML and CSS
+
 <blockquote class="dark">
 <h1>What about native apps?</h1>
 <p><img src="images/native-responses.jpg"></img></p>
 </blockquote>
 
+
+
+
+## How do PWAs change this?
+
+Most APIs enhance the web within the context of a browser.
+
+New APIs realted to progressive web apps use new APIs to enhance the web beyond the browser and the network.
+
+You don't need to be building a progressive web app to take advantage of them.
+
+One can build a website which is no longer tied to a browser window.
+
+Using a service worker you are no longer reliant upon the network,
+
+Once the service worker is running you can provide cached content or fabricate new content on a whim.
+
+One could even interact with the user without even rendering a line of html via push notifications.
+
+<script>window.setDynamicSlide(window.elByEl());</script>
+
+> ![The web as you know it today.](images/the-pwa-web1.svg)
+>
+> ![Apps can be show outside of a browser context](images/the-pwa-web2.svg)
+>
+> ![Service Workers can intercept network requests](images/the-pwa-web3.svg)
+>
+> ![Push notifications allow us to almost discard the front end entirely](images/the-pwa-web4.svg)
+
 > # Attributions
 > * Mocking Bird Argument - https://commons.wikimedia.org/wiki/File:Mocking_Bird_Argument.jpg?uselang=en-gb
+> * My article on progressive web apps - https://www.smashingmagazine.com/2016/09/the-building-blocks-of-progressive-web-apps/
 
 <script>
 
+	// Fancy Emojis
+	window._addScript('https://twemoji.maxcdn.com/2/twemoji.min.js')().then(function () {
+		twemoji.parse(document.body, {
+			folder: 'svg',
+			ext: '.svg'
+		});
+	});
+
 	// Add links to deep link into slides
-	var blockquote = Array.from(document.querySelectorAll('blockquote'));
+	var blockquote = Array.from(document.querySelectorAll('body > blockquote'));
 	var newSpans = [];
 	document.querySelector('a[href="#aslides"]').addEventListener('click', function () {
 		newSpans.forEach(function (s) {

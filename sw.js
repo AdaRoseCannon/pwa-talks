@@ -7,8 +7,7 @@ importScripts('scripts/sw-toolbox.js');
 toolbox.precache([
 	'https://cdn.rawgit.com/AdaRoseEdwards/a-slides/v1.4.0/build/a-slides.js',
 	'https://twemoji.maxcdn.com/2/twemoji.min.js',
-
-])
+]);
 
 // Send a signal to all connected windows.
 // Used for service worker bridge in a-slides
@@ -29,14 +28,16 @@ self.addEventListener('message', function(event) {
 // Recieve messages from the client and reply back onthe same port
 self.addEventListener('fetch', function (event) {
 	const request = event.request;
-	const handler = toolbox.networkFirst;
 	if (
 		!(
 			request.url.match(/(\.mp4|\.webm|\.avi|\.wmv|\.m4v)$/i) ||
 			request.url.match(/data:/i)
 		)
 	) {
-		event.respondWith(handler(request, [], {
+		if (request.url.match(/^https:\/\/twemoji.maxcdn.com/gi)) {
+			return event.respondWith(toolbox.cacheFirst(request, [], {}));
+		}
+		event.respondWith(toolbox.networkFirst(request, [], {
 			networkTimeoutSeconds: 3
 		}));
 	}
