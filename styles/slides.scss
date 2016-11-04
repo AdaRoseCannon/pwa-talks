@@ -54,12 +54,17 @@
 		font-family: Lato;
 		z-index: 7;
 
-		&, & > div {
+		&, & > div, & > blockquote {
 			display: flex;
 			align-items: stretch;
 			justify-content: flex-start;
 			align-content: flex-start;
 			flex-direction: column;
+		}
+
+		blockquote {
+			margin: 0;
+			border: none;
 		}
 
 		p {

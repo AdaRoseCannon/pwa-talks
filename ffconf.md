@@ -208,15 +208,17 @@ New APIs were forged in the fires of mountainview and in 2014 the Service Worker
 
 <script>window.setDynamicSlide(window.elByEl());</script>
 
-> `http://m.blah.com` 😢
+> <span style="font-size: 120px;">http://m.blah.com 😢</span>
 >
-> ![Responsive Design Illustration](images/responsive-design.jpg)
-> ## https://en.wikipedia.org/wiki/File:Content-is-like-water-1980.jpg
+> > ![Responsive Design Illustration](images/responsive-design.jpg)
+> >
+> > ## https://en.wikipedia.org/wiki/File:Content-is-like-water-1980.jpg
 >
-> ![XKCD 1367 - Web Apps](images/installing.png)
-> ## https://xkcd.com/1367/
+> > ![XKCD 1367 - Web Apps](images/installing.png)
+> >
+> > ## https://xkcd.com/1367/
 >
-> ![Where it all began](the-beginning.png)
+> ![Where it all began](images/the-beginning.png)
 
 This spawned a revolution in
 
