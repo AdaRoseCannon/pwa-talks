@@ -217,7 +217,9 @@ These lovely feaures only come out of lots of work and debate put in amongst sta
 > > <h1 style="font-size: 120px;">⏱</h1>
 > > ![60FPS](images/timeline.png)
 >
-> Device Wall
+> > ![Device Wall By Robert Nyman](images/device-wall.jpg)
+> >
+> > ## https://www.flickr.com/photos/robertnyman/23241510281
 >
 > <span style="font-size: 50vw; display: flex; align-content: center; justify-content: center; align-items: center; flex-grow: 1;">🌎🌍🌏</span>
 >
@@ -303,13 +305,15 @@ Well I asked recently at MozFest for some ideas and this is what I got:
 <p><img src="images/native-responses.jpg" /></p>
 </blockquote>
 
+## Building these features
+
+<script>window.setDynamicSlide(window.elByEl());</script>
+
 Today I would like to show many of you how these native-like features are no longer tied to native platform
 
 And are available to use to build apps in the web today.
 
 Allowing you to have your cake and eat it too!!
-
-## Building these features
 
 ### A Place on the homescreen
 
@@ -320,8 +324,6 @@ Allowing you to have your cake and eat it too!!
 ### Push Notifications
 
 ### Performance
-
-<script>window.setDynamicSlide(window.elByEl());</script>
 
 > ## manifest.json
 >
@@ -343,6 +345,17 @@ Allowing you to have your cake and eat it too!!
 
 
 ## The cost of a progressive web app
+
+What you gain in screen real estate and appearing native
+
+You lose the browser context
+
+* History Tools
+* Bookmarks
+* Easy Access to Copy/Edit the url (weel known pattern)
+
+
+Don't want to take all Native features try to avoid losing web ones.
 
 >
 
