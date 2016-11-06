@@ -84,12 +84,13 @@ body.post {
 	}
 
 	img {
-		max-width: 30em;
+		max-width: 100%;
 		max-height: 50vmax;
 	}
 
 	blockquote {
-		background-color: white;
+		background-color: darkslategray;
+		color: white;
 		border: 1px solid grey;
 		display: flex;
 		flex-direction: column;
@@ -98,6 +99,7 @@ body.post {
 		position: relative;
 		overflow: hidden;
 		margin-bottom: 3em;
+		max-width: 1024px;
 	}
 
 	footer {
