@@ -75,7 +75,7 @@ This allows you to give a native-like browsing context to your content.
 >
 > <img src="images/context.svg" style="filter: invert();" />
 
-
+## The future
 
 The web is so widely available that not every feature works on every browser.
 
@@ -328,8 +328,8 @@ Allowing you to have your cake and eat it too!!
 
 ### Web Payment APIs
 
-> ## manifest.json
-> ```json
+> > ## manifest.json
+> > ```json
 {
   "name": "Podle",
   "start_url": "/v7/",
@@ -340,11 +340,6 @@ Allowing you to have your cake and eat it too!!
     {
       "src": "/static/icon192.png",
       "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/static/icon512.png",
-      "sizes": "512x512",
       "type": "image/png"
     }
   ]
@@ -389,7 +384,7 @@ Then you can start building your single page web app around the content you have
 <h1 id="true-fact-a-new-javascript-framework-is-released-every-6-seconds">True Fact: A new JavaScript Framework is released every 6 seconds*</h1>
 <h3 id="not-a-true-fact">*Not a true fact</h3>
 </div>
-<ol style="font-size: 2em;" class="prpl">
+<ol style="font-size: 1.5em;" class="prpl">
 <li>Push critical resources for the initial route.</li>
 <li>Render initial route.</li>
 <li>Pre-cache remaining routes.</li>
