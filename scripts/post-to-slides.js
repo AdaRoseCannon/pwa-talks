@@ -28,6 +28,19 @@ function addStyle(url){
 	document.getElementsByTagName('head')[0].appendChild(styles);
 }
 
+function fullScreenPlugin(o) {
+	var element = o.slideContainer;
+	ASlides.plugins.slideController.makeAndBindButton('Fullscreen', function () {
+		if (element.requestFullscreen) { // W3C API
+			element.requestFullscreen();
+		} else if (element.mozRequestFullScreen) { // Mozilla current API
+			element.mozRequestFullScreen();
+		} else if (element.webkitRequestFullScreen) { // Webkit current API
+			element.webkitRequestFullScreen();
+		}
+	});
+}
+
 function addScript (url) {
 	var p = new Promise(function (resolve, reject) {
 		var script = document.createElement('script');
@@ -131,7 +144,8 @@ function init() {
 				ASlides.plugins.interactionTouch({ // has configuration
 					use: ['swipe-back']
 				}),
-				ASlides.plugins.bridgeServiceWorker
+				ASlides.plugins.bridgeServiceWorker,
+				fullScreenPlugin
 			]
 		});
 

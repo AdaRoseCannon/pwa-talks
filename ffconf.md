@@ -57,6 +57,7 @@ As long as your content arrives.
 
 
 ## Content vs Context
+<script>window.setDynamicSlide(window.elByEl());</script>
 
 Your content is the product you are trying to deliver it has extremely wide support on the web.
 
@@ -70,8 +71,8 @@ The new progressive web app features add extra functionality to the web platform
 
 This allows you to give a native-like browsing context to your content.
 
-<script>window.setDynamicSlide(window.elByEl());</script>
 > <img src="images/content.svg" style="filter: invert();" />
+>
 > <img src="images/context.svg" style="filter: invert();" />
 
 
@@ -325,7 +326,30 @@ Allowing you to have your cake and eat it too!!
 
 ### Performance
 
+### Web Payment APIs
+
 > ## manifest.json
+> ```json
+{
+  "name": "Podle",
+  "start_url": "/v7/",
+  "display": "standalone",
+  "background_color": "white",
+  "theme_color": "#4E3F30",
+  "icons": [
+    {
+      "src": "/static/icon192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/icon512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+```
 >
 > ![The web as you know it today.](images/the-pwa-web1.svg)
 >
@@ -334,16 +358,44 @@ Allowing you to have your cake and eat it too!!
 > ![Service Workers can intercept network requests](images/the-pwa-web3.svg)
 >
 > ![Push notifications allow us to almost discard the front end entirely](images/the-pwa-web4.svg)
->
-> ## Don't break it
 
 
 ## Not breaking performance
+<script>window.setDynamicSlide(window.elByEl());</script>
 
-> Don't let your rush to a single page web app stop the speed
+JavaScript has many frameworks focused on getting pages to render and update fast.
 
+Many follow the Single Page Web App pattern.
 
+This means that everytime a page changes the browser does not reload the page.
 
+This is a pattern which feels very native because you can present dummy content to the user as it is loading.
+
+In controlling transitions yourself as well as having cached network responses you can go fast.
+
+A great pattern for this is to:
+
+Pull down the minimal assets to get the page rendered and interactive.
+
+Try to have the content in the HTML asset.
+
+Then pull down any additional content assets, images and the like.
+
+Then you can start building your single page web app around the content you have loaded in.
+
+<blockquote class="dark" style="background-image: url('images/bird6.jpg');">
+<h1>Performance</h1>
+<div>
+<h1 id="true-fact-a-new-javascript-framework-is-released-every-6-seconds">True Fact: A new JavaScript Framework is released every 6 seconds*</h1>
+<h3 id="not-a-true-fact">*Not a true fact</h3>
+</div>
+<ol style="font-size: 2em;" class="prpl">
+<li>Push critical resources for the initial route.</li>
+<li>Render initial route.</li>
+<li>Pre-cache remaining routes.</li>
+<li>Lazy-load and create remaining routes on demand.</li>
+</ol>
+</blockquote>
 ## The cost of a progressive web app
 
 What you gain in screen real estate and appearing native
@@ -352,12 +404,16 @@ You lose the browser context
 
 * History Tools
 * Bookmarks
-* Easy Access to Copy/Edit the url (weel known pattern)
-
+* Easy Access to Copy/Edit the url (well known pattern)
 
 Don't want to take all Native features try to avoid losing web ones.
 
->
+You can provide hooks into the History api.
+
+You can use sharing buttons or the upcoming share APIs to enable sharing when the URL bar is hidden.
+
+> ![Podle in Browser](images/in-browser.png)
+> ![Podle in Standalone](images/in-standalone.png)
 
 ## Conclusions
 
@@ -367,12 +423,14 @@ Don't think like a native developer
 
 You are building for the web, think webby, this means:
 
-* how
-* to
-* think
-* webby
+* Starts fast and displays some content whilst downloading rest.
+* Doesn't break when some features are unavailable.
+* Not in a SILO, if I see a DOT-PWA website I will be mad.
+* Don't break accessibility, try to optimise keyboard only interaction.
 
->
+<blockquote class="dark" style="background-image: url('images/bird4.jpg');">
+<h1>Think Webby! Feel Native!</h1>
+</blockquote>
 
 ## Attributions
 
