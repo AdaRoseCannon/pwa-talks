@@ -88,22 +88,31 @@
 				padding: 0;
 			}
 
+
+			// image captions in slides
+			h4 {
+				margin: 0;
+			}
+
 			& img:not(.emoji),
 			& video {
 				object-fit: contain;
 				flex-grow: 1;
 				flex-shrink: 1;
 				width: auto;
+				max-height: calc(100vh - 10rem);
+				max-width: 100%;
+			}
 
-				&, img.emoji {
-					max-height: calc(100vh - 8em);
-					max-width: 100%;
-				}
+			img.emoji {
+				max-height: calc(100vh - 10rem);
+				max-width: 100%;
 			}
 
 			// Video behaves differently from img here
 			video {
 				height: 0;
+				min-height: 3em;
 			}
 
 			& iframe {

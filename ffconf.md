@@ -18,6 +18,8 @@ styles: [
 
 Abstract: With new web technologies enabling a new generation of install-able app-like websites it is important to ensure the web carries on working for everyone. This talk will discuss the P in PWA, progressive web apps should work for everyone and should not let their app-like approach divorce them from the web.
 
+<span id="a-slides_clock">40</span> mins
+
 <!-- This slide uses information from _config.yml -->
 <blockquote class="dark" style="background-image: url('images/bird1.jpg');">
 <h1>{{ page.title }}</h1>
@@ -27,7 +29,6 @@ Abstract: With new web technologies enabling a new generation of install-able ap
 @lady_ada_king, @samsunginternet
 </h2>
 </blockquote>
-
 
 ## A quick example install of a Web Apps
 
@@ -88,7 +89,7 @@ They are called user agents because they act on behalf of the user to interpret 
 <script>window.setDynamicSlide(window.elByEl());</script>
 <blockquote class="dark" style="background-image: url('images/bird2.jpg');">
 <h1><i>The future is already here — it&#x27;s just not very evenly distributed.</i> - William Gibson</h1>
-<ul>
+<ul style="font-size: 1.5em;">
 <li>Old Browser</li>
 <li>Feature reduced browser</li>
 <li>Feature disabled by browser configuration</li>
@@ -103,7 +104,7 @@ They are called user agents because they act on behalf of the user to interpret 
 
 The web is designed to be declarative.
 
-This is how the web is meant to be and a fundamental difference between native.
+This is how the web is meant to be and a fundamental difference from native.
 
 It is designed to be interpreted depending on the platform.
 
@@ -163,12 +164,13 @@ Even to the point where browser-prefixed APIs have been reimplemented across bro
 <script>window.setDynamicSlide(window.elByEl());</script>
 <blockquote class="dark" style="background-image: url('images/bird10.jpg');">
 <h1 style="text-align: center;">The web is based on Standards</h1>
-<h1><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Security!</span></h1>
-<h1><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Privacy!</span></h1>
-<h1><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Accessibility!</span></h1>
-<h1><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Extensibility!</span></h1>
-<h1><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Implementability!</span></h1>
-<h1><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Performance!</span></h1>
+<h1 style="font-size: 1.5em;"><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Security!</span></h1>
+<h1 style="font-size: 1.5em;"><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Privacy!</span></h1>
+<h1 style="font-size: 1.5em;"><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Accessibility!</span></h1>
+<h1 style="font-size: 1.5em;"><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Extensibility!</span></h1>
+<h1 style="font-size: 1.5em;"><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Implementability!</span></h1>
+<h1 style="font-size: 1.5em;"><span style="color: skyblue;">Feature?</span><span style="float: right; color: pink;">Performance!</span></h1>
+<h1>The Web is Built to Last</h1>
 </blockquote>
 
 
@@ -220,7 +222,7 @@ These lovely feaures only come out of lots of work and debate put in amongst sta
 >
 > > ![Device Wall By Robert Nyman](images/device-wall.jpg)
 > >
-> > ## https://www.flickr.com/photos/robertnyman/23241510281
+> > #### https://www.flickr.com/photos/robertnyman/23241510281
 >
 > <span style="font-size: 50vw; display: flex; align-content: center; justify-content: center; align-items: center; flex-grow: 1;">🌎🌍🌏</span>
 >
@@ -230,7 +232,7 @@ These lovely feaures only come out of lots of work and debate put in amongst sta
 >
 > > ![First Website](images/first-website.png)
 > >
-> > ### http://info.cern.ch/hypertext/WWW/TheProject.html
+> > #### http://info.cern.ch/hypertext/WWW/TheProject.html
 >
 > <span style="font-size: 120px; display: flex; align-content: center; justify-content: center; align-items: center; flex-grow: 1;">&lt;blink&gt; 😢</span>
 >
@@ -274,21 +276,22 @@ Over the years between new Standards have been agreed upon for helping bring con
 >
 > > ![Responsive Design Illustration](images/responsive-design.jpg)
 > >
-> > ## https://en.wikipedia.org/wiki/File:Content-is-like-water-1980.jpg
+> > #### https://en.wikipedia.org/wiki/File:Content-is-like-water-1980.jpg
 >
 > > ![XKCD 1174 - Web Apps](images/app.png)
 > >
-> > ## https://xkcd.com/1174/
+> > #### https://xkcd.com/1174/
 >
 > > ![XKCD 1367 - Web Apps](images/installing.png)
 > >
-> > ## https://xkcd.com/1367/
+> > #### https://xkcd.com/1367/
 >
 > ![Where it all began](images/the-beginning.png)
 
 
 
 ## What about native apps?
+<script>window.setDynamicSlide(window.elByEl());</script>
 
 So what are the features which needed to be in the web.
 
@@ -301,9 +304,15 @@ Well I asked recently at MozFest for some ideas and this is what I got:
 * A place on the home screen
 * Sellable
 
-<blockquote class="dark">
+<blockquote class="dark" style="background-image: url('images/bird7.jpg');">
 <h1>What about native apps?</h1>
 <p><img src="images/native-responses.jpg" /></p>
+<h2>Integrated UI</h2>
+<h2>Offline Capable</h2>
+<h2>Push Notifications</h2>
+<h2>Performant</h2>
+<h2>A place on the home screen</h2>
+<h2>Sellable</h2>
 </blockquote>
 
 ## Building these features
@@ -328,23 +337,22 @@ Allowing you to have your cake and eat it too!!
 
 ### Web Payment APIs
 
-> > ## manifest.json
-> > ```json
-{
-  "name": "Podle",
-  "start_url": "/v7/",
-  "display": "standalone",
-  "background_color": "white",
-  "theme_color": "#4E3F30",
-  "icons": [
-    {
-      "src": "/static/icon192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
-  ]
-}
-```
+> <div style="flex-direction: row;"><div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+>   </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Podle"</span><span class="p">,</span><span class="w">
+>   </span><span class="nt">"start_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v7/"</span><span class="p">,</span><span class="w">
+>   </span><span class="nt">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"standalone"</span><span class="p">,</span><span class="w">
+>   </span><span class="nt">"background_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w">
+>   </span><span class="nt">"theme_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#4E3F30"</span><span class="p">,</span><span class="w">
+>   </span><span class="nt">"icons"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+>     </span><span class="p">{</span><span class="w">
+>       </span><span class="nt">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/static/icon192.png"</span><span class="p">,</span><span class="w">
+>       </span><span class="nt">"sizes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"192x192"</span><span class="p">,</span><span class="w">
+>       </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image/png"</span><span class="w">
+>     </span><span class="p">}</span><span class="w">
+>   </span><span class="p">]</span><span class="w">
+> </span><span class="p">}</span><span class="w">
+> </span></code></pre>
+> </div><img style="max-width: 50%;" src="images/in-standalone.png" /></div>
 >
 > ![The web as you know it today.](images/the-pwa-web1.svg)
 >
@@ -354,6 +362,21 @@ Allowing you to have your cake and eat it too!!
 >
 > ![Push notifications allow us to almost discard the front end entirely](images/the-pwa-web4.svg)
 
+## P in PWA
+
+As well as each of these being considered a progressive enhancement themselves.
+
+A service worker allows the network itself to be considered an enhancement.
+
+So that after the first load your page can be expected to work offline.
+
+This can be a great boon as people will use your site when they know their connection is poor.
+
+The idea is to build an ofline by default mindset in the users of the web
+
+<blockquote class="dark" style="background-image: url('images/bird5.jpg');">
+<h1>Layers of Progressive Enhancement</h1>
+</blockquote>
 
 ## Not breaking performance
 <script>window.setDynamicSlide(window.elByEl());</script>
@@ -384,6 +407,9 @@ Then you can start building your single page web app around the content you have
 <h1 id="true-fact-a-new-javascript-framework-is-released-every-6-seconds">True Fact: A new JavaScript Framework is released every 6 seconds*</h1>
 <h3 id="not-a-true-fact">*Not a true fact</h3>
 </div>
+<div>
+<h1>Dummy Content</h1>
+</div>
 <ol style="font-size: 1.5em;" class="prpl">
 <li>Push critical resources for the initial route.</li>
 <li>Render initial route.</li>
@@ -391,6 +417,7 @@ Then you can start building your single page web app around the content you have
 <li>Lazy-load and create remaining routes on demand.</li>
 </ol>
 </blockquote>
+
 ## The cost of a progressive web app
 
 What you gain in screen real estate and appearing native
@@ -446,7 +473,7 @@ You are building for the web, think webby, this means:
 	});
 
 	// Add links to deep link into slides
-	var blockquote = Array.from(document.querySelectorAll('body > blockquote'));
+	var blockquote = Array.from(document.querySelectorAll('body.post > blockquote'));
 	var newSpans = [];
 	document.querySelector('a[href="#aslides"]').addEventListener('click', function () {
 		newSpans.forEach(function (s) {
