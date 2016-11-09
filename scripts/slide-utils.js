@@ -122,7 +122,7 @@ window.contentSlide = function (slides) {
 
 			while(t.length) {
 
-				this.empty();
+				this.innerHTML = '';
 				let i = t.shift();
 				if (i) {
 					switch(Object.keys(i)[0]) {
@@ -156,7 +156,7 @@ window.contentSlide = function (slides) {
 		},
 		teardown() {
 			if (oldContent) {
-				this.empty();
+				this.innerHTML = '';
 				oldContent.forEach(c => this.appendChild(c));
 			}
 		}

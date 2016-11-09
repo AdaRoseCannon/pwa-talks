@@ -5,6 +5,7 @@ description:  Building apps in the web for increased reach and conversions. - pr
 scripts: [
 	'scripts/post-to-slides.js',
 	'scripts/slide-utils.js',
+	'scripts/third-party/dirty-dom-lib.min.js',
 ]
 styles: [
 	'scripts/third-party/a-slides.css',

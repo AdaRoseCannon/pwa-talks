@@ -5,6 +5,7 @@ description: Keeping the web in Web Apps
 scripts: [
 	'scripts/post-to-slides.js',
 	'scripts/slide-utils.js',
+	'scripts/third-party/dirty-dom-lib.min.js',
 ]
 styles: [
 	'scripts/third-party/a-slides.css',
@@ -379,7 +380,6 @@ The idea is to build an ofline by default mindset in the users of the web
 </blockquote>
 
 ## Not breaking performance
-<script>window.setDynamicSlide(window.elByEl());</script>
 
 JavaScript has many frameworks focused on getting pages to render and update fast.
 
@@ -401,6 +401,19 @@ Then pull down any additional content assets, images and the like.
 
 Then you can start building your single page web app around the content you have loaded in.
 
+<script>window.setDynamicSlide(window.contentSlide([
+	{markdown: '# Performance'},
+	{markdown: '# True Fact: A new JavaScript Framework is released every 6 seconds*\n\n## *Not a true fact'},
+	{video: 'images/dummy-content.mp4'},
+	{html: [
+		'<ol style="font-size: 1.5em;" class="prpl">',
+		'<li>Push critical resources for the initial route.</li>',
+		'<li>Render initial route.</li>',
+		'<li>Pre-cache remaining routes.</li>',
+		'<li>Lazy-load and create remaining routes on demand.</li>',
+		'</ol>'
+	].join('')}
+]));</script>
 <blockquote class="dark" style="background-image: url('images/bird6.jpg');">
 <h1>Performance</h1>
 <div>
@@ -408,7 +421,8 @@ Then you can start building your single page web app around the content you have
 <h3 id="not-a-true-fact">*Not a true fact</h3>
 </div>
 <div>
-<h1>Dummy Content</h1>
+dummy-content.mp4
+<video src="images/dummy-content.mp4" autoplay="true" muted></video>
 </div>
 <ol style="font-size: 1.5em;" class="prpl">
 <li>Push critical resources for the initial route.</li>
