@@ -103,6 +103,36 @@ window.getSlideName = function (el) {
 	return 'slide-' + name;
 }
 
+function renderContent(el, data) {
+	if (data) {
+		switch(Object.keys(data)[0]) {
+			case 'video':
+				el.innerHTML = `<video src="${data.video}" preload autoplay autostart loop style="object-fit: contain; flex: 1 0;" />`;
+				el.querySelector('video').currentTime=0;
+				el.querySelector('video').play();
+				break;
+			case 'image':
+				el.innerHTML = `<image src="${data.image}" />`;
+				break;
+			case 'markdown':
+				el.addMarkdown(data.markdown);
+				break;
+			case 'html':
+				el.innerHTML = data.html;
+				break;
+			case 'iframe':
+				el.innerHTML = `<iframe src="${data.iframe}" frameborder="none" style="flex: 1 0;" /></iframe>`;
+				break;
+		}
+		if (data.caption) {
+			el.addMarkdown(data.caption);
+		}
+		if (data.url  || data.iframe) {
+			el.addHTML(`<div class="slide-url">${data.url || data.iframe || ''}</div>`);
+		}
+	}
+}
+
 // Uses ES2015 Generators
 window.contentSlide = function (slides) {
 	var oldContent;
@@ -110,6 +140,8 @@ window.contentSlide = function (slides) {
 	return {
 		setup: function setup() {
 			oldContent = Array.from(this.children);
+			this.innerHTML = '';
+			renderContent(this, slides[0]);
 		},
 		action: function* () {
 
@@ -121,36 +153,8 @@ window.contentSlide = function (slides) {
 			}
 
 			while(t.length) {
-
 				this.innerHTML = '';
-				let i = t.shift();
-				if (i) {
-					switch(Object.keys(i)[0]) {
-						case 'video':
-							this.innerHTML = `<video src="${i.video}" preload autoplay autostart loop style="object-fit: contain; flex: 1 0;" />`;
-							this.querySelector('video').currentTime=0;
-							this.querySelector('video').play();
-							break;
-						case 'image':
-							this.innerHTML = `<image src="${i.image}" />`;
-							break;
-						case 'markdown':
-							this.addMarkdown(i.markdown);
-							break;
-						case 'html':
-							this.innerHTML = i.html;
-							break;
-						case 'iframe':
-							this.innerHTML = `<iframe src="${i.iframe}" frameborder="none" style="flex: 1 0;" /></iframe>`;
-							break;
-					}
-					if (i.caption) {
-						this.addMarkdown(i.caption);
-					}
-					if (i.url  || i.iframe) {
-						this.addHTML(`<div class="slide-url">${i.url || i.iframe || ''}</div>`);
-					}
-				}
+				renderContent(this, t.shift());
 				yield;
 			}
 		},

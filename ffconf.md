@@ -273,13 +273,11 @@ Over the years between new Standards have been agreed upon for helping bring con
 
 <script>window.setDynamicSlide(window.elByEl());</script>
 
-> <span style="font-size: 120px;">http://m.blah.com 😢</span>
+> <p><span style="font-size: 80px; text-align: center; max-width: 50%;">http://m.blah.com 😢</span><img src="images/app.png" alt="XKCD 1174 - Web Apps" /></p>
 >
 > > ![Responsive Design Illustration](images/responsive-design.jpg)
 > >
 > > #### https://en.wikipedia.org/wiki/File:Content-is-like-water-1980.jpg
->
-> > ![XKCD 1174 - Web Apps](images/app.png)
 > >
 > > #### https://xkcd.com/1174/
 >
@@ -288,8 +286,6 @@ Over the years between new Standards have been agreed upon for helping bring con
 > > #### https://xkcd.com/1367/
 >
 > ![Where it all began](images/the-beginning.png)
-
-
 
 ## What about native apps?
 <script>window.setDynamicSlide(window.elByEl());</script>
@@ -463,6 +459,10 @@ You are building for the web, think webby, this means:
 * Doesn't break when some features are unavailable.
 * Not in a SILO, if I see a DOT-PWA website I will be mad.
 * Don't break accessibility, try to optimise keyboard only interaction.
+
+Take advantage of the interpreted power in the web to break gracefully, be robust over the network and keep working long into the future.
+
+By building websites which are meant to last we will build a web which is built to last.
 
 <blockquote class="dark" style="background-image: url('images/bird4.jpg');">
 <h1>Think Webby! Feel Native!</h1>
