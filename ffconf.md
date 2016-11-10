@@ -276,14 +276,13 @@ Over the years between new Standards have been agreed upon for helping bring con
 <blockquote class="dark" style="background-image: url('images/nest.jpg');">
 <h1 id="how-web-apps-grew-out-of-the-mobile-web">How Web Apps grew out of the mobile web.</h1>
 
-<p><span style="font-size: 80px; text-align: center; max-width: 50%;">http://m.blah.com <img draggable="false" class="emoji" alt="😢" src="https://twemoji.maxcdn.com/2/svg/1f622.svg"></span><img src="images/app.png" alt="XKCD 1174 - Web Apps"></p>
+<div style="flex-direction: row;justify-content: space-around;"><span style="font-size: 80px; text-align: center; max-width: 50%;">http://m.blah.com <img draggable="false" class="emoji" alt="😢" src="https://twemoji.maxcdn.com/2/svg/1f622.svg"></span><div style="display: flex; flex-direction: column;"><img src="images/app.png" alt="XKCD 1174 - Web Apps">
+<h4>https://xkcd.com/1174/</h4></div></div>
 
 <blockquote>
 <p><img src="images/responsive-design.jpg" alt="Responsive Design Illustration"></p>
 
 <h4 id="httpsenwikipediaorgwikifilecontent-is-like-water-1980jpg">https://en.wikipedia.org/wiki/File:Content-is-like-water-1980.jpg</h4>
-
-<h4 id="httpsxkcdcom1174">https://xkcd.com/1174/</h4>
 </blockquote>
 
 <blockquote>
@@ -295,7 +294,7 @@ Over the years between new Standards have been agreed upon for helping bring con
 <p><img src="images/the-beginning.png" alt="Where it all began"></p>
 <span class="slide-view-button"> View Slide</span></blockquote>
 
-## What about native apps?
+## Why was native better?
 <script>window.setDynamicSlide(window.elByEl());</script>
 
 So what are the features which needed to be in the web.
@@ -310,7 +309,7 @@ Well I asked recently at MozFest for some ideas and this is what I got:
 * Sellable
 
 <blockquote class="dark" style="background-image: url('images/bird7.jpg');">
-<h1>What about native apps?</h1>
+<h1>Why was native better?</h1>
 <p><img src="images/native-responses.jpg" /></p>
 <h2>Integrated UI</h2>
 <h2>Offline Capable</h2>
