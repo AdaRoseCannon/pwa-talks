@@ -273,19 +273,27 @@ Over the years between new Standards have been agreed upon for helping bring con
 
 <script>window.setDynamicSlide(window.elByEl());</script>
 
-> <p><span style="font-size: 80px; text-align: center; max-width: 50%;">http://m.blah.com 😢</span><img src="images/app.png" alt="XKCD 1174 - Web Apps" /></p>
->
-> > ![Responsive Design Illustration](images/responsive-design.jpg)
-> >
-> > #### https://en.wikipedia.org/wiki/File:Content-is-like-water-1980.jpg
-> >
-> > #### https://xkcd.com/1174/
->
-> > ![XKCD 1367 - Web Apps](images/installing.png)
-> >
-> > #### https://xkcd.com/1367/
->
-> ![Where it all began](images/the-beginning.png)
+<blockquote class="dark" style="background-image: url('images/nest.jpg');">
+<h1 id="how-web-apps-grew-out-of-the-mobile-web">How Web Apps grew out of the mobile web.</h1>
+
+<p><span style="font-size: 80px; text-align: center; max-width: 50%;">http://m.blah.com <img draggable="false" class="emoji" alt="😢" src="https://twemoji.maxcdn.com/2/svg/1f622.svg"></span><img src="images/app.png" alt="XKCD 1174 - Web Apps"></p>
+
+<blockquote>
+<p><img src="images/responsive-design.jpg" alt="Responsive Design Illustration"></p>
+
+<h4 id="httpsenwikipediaorgwikifilecontent-is-like-water-1980jpg">https://en.wikipedia.org/wiki/File:Content-is-like-water-1980.jpg</h4>
+
+<h4 id="httpsxkcdcom1174">https://xkcd.com/1174/</h4>
+</blockquote>
+
+<blockquote>
+<p><img src="images/installing.png" alt="XKCD 1367 - Web Apps"></p>
+
+<h4 id="httpsxkcdcom1367">https://xkcd.com/1367/</h4>
+</blockquote>
+
+<p><img src="images/the-beginning.png" alt="Where it all began"></p>
+<span class="slide-view-button"> View Slide</span></blockquote>
 
 ## What about native apps?
 <script>window.setDynamicSlide(window.elByEl());</script>
