@@ -194,6 +194,15 @@ body > blockquote, .a-slides_slide-content {
 			font-family: serif;
 		}
 	}
+
+	div {
+		display: flex;
+		align-items: stretch;
+		justify-content: flex-start;
+		align-content: flex-start;
+		flex-direction: column;
+		flex-grow: 1;
+	}
 }
 
 iframe {

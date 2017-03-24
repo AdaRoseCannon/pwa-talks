@@ -69,7 +69,7 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 > ![How it could have been](images/sign.jpg)
 
 
-> <div style="display: flex;">
+> <div style="display: flex; flex-direction: row; align-items; auto;">
 > <div style="text-align: left;">
 > <h1>Cool Web Features</h1>
 > <ul style="list-style-type: none;">
@@ -114,16 +114,15 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 > <h1 style="text-align: right;">Uhhh.....</h1>
 > </div>
 
-Web Apps provide many advantages:
 
-* By Pass the App Store
-* Seamless install
-* The user installs the web app without leaving the page
-* Much cheaper
-* Maintain multiple platforms with a single product.
+<blockquote style="background: linear-gradient(to bottom, rgb(29, 23, 66) 0%, rgb(30, 30, 119) 40%, rgb(62, 43, 47) 100%);">
+<img src="images/lighthouse-logo.svg" />
+<h2 style="text-align: center;">Google Lighthouse</h2>
+</blockquote>
 
-> # Why Would You want to?
-> Graph of user drop offs per click
+> # App-Like Metrics
+>
+>
 
 If you have concerns about whether the Web has the features you need the web platform has:
 
