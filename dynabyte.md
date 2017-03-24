@@ -98,8 +98,6 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 
 > <img src="images/ft-news.png" />
 
-> <img src="https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/images/add-to-home-screen.gif" alt="install banner gif"/>
-
 <script>_setNextSlide(elByEl());</script>
 > <div>
 > <h1>How do you define an App?</h1>
@@ -120,9 +118,90 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 <h2 style="text-align: center;">Google Lighthouse</h2>
 </blockquote>
 
-> # App-Like Metrics
->
->
+
+<script>_setNextSlide({
+	setup: function () {
+		this.img = this.img || this.querySelector('img');
+		this.img.style.transform = 'scale(2)';
+		this.img.style.transformOrigin = '0 0';
+	},
+	action: function *() {
+		yield;
+		this.img.style.transition = 'transform 5s ease-in'
+		this.img.style.transform = 'translateY(-100%) translateY(100vh) translateY(-3em)';
+		yield;
+	},
+	teardown : function () {
+		if (this.img) {
+			this.img.style.transition = 'none';
+		}
+	}
+});</script>
+<blockquote><img src="images/result.png" style="position: absolute;top: 0;left:0;right: 0;max-height: none;margin: 0;"></blockquote>
+
+<script>_cssNextEl({
+	'font-size': '2.5em'
+});</script>
+> * Responsively Designed
+> * Web App Manifest
+> * Triggers Browser Install Prompts
+> * Going Offline
+> * Push Notifications
+> * Progressive Enhancement
+
+<blockquote style="background-color: #141414 !important; padding: 0;">
+<img src="images/responsive-design.jpg" style="position: absolute;top: 0;left:0;right: 0;max-height: 100%;margin: 0;width: 100%; box-sizing: border-box;" />
+</blockquote>
+
+<script>window.setDynamicSlide(window.elByEl());</script>
+<blockquote class="dark" style="background-image: url('images/bird9.jpg');">
+<h1>Web App Manifest</h1>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"theme-color"</span> <span class="na">content=</span><span class="s">"#4E3F30"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"manifest"</span> <span class="na">href=</span><span class="s">"/static/manifest.json"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://podle.ada.is/static/icon192.png"</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">sizes=</span><span class="s">"192x192"</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Podle"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"icons"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+	</span><span class="p">{</span><span class="w">
+		</span><span class="nt">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/static/icon192.png"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"sizes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"192x192"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image/png"</span><span class="w">
+	</span><span class="p">},</span><span class="w">
+	</span><span class="p">{</span><span class="w">
+		</span><span class="nt">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/static/icon512.png"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"sizes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"512x512"</span><span class="p">,</span><span class="w">
+		</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image/png"</span><span class="w">
+	</span><span class="p">}</span><span class="w">
+</span><span class="p">],</span><span class="w">
+	</span><span class="nt">"start_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v7/"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"standalone"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"background_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w">
+	</span><span class="nt">"theme_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#4E3F30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+</blockquote>
+
+<blockquote>
+<h1>Triggering Browser Install Prompts</h1>
+<img src="https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/images/add-to-home-screen.gif" alt="install banner gif"/>
+<h2>https://samsunginter.net/docs/ambient-badging.html</h2>
+</blockquote>
+
+> # Going offline
+
+<blockquote style="justify-content: flex-end;padding: 0;">
+<img src="images/slack-notification.png" style="position: absolute;top: 0;left:0;right: 0;max-height: none;margin: 0;width: 100%;">
+<h2 style="align-self: flex-end;background: linear-gradient(to top, rgba(47,79,79,1) 10%, rgba(47,79,79,0.5) 100%);text-shadow: 0 0 0.3em darkslategrey;z-index: 2;padding: 1em;box-sizing: border-box;margin: 0;font-size: 1.2em;">https://slack.engineering/reducing-slacks-memory-footprint-4480fec7e8eb#.br9mtzz2r</h2>
+</blockquote>
+
+> # Progressive Enhancement
+
+> # Future Web APIs
+
+<!--
 
 If you have concerns about whether the Web has the features you need the web platform has:
 
@@ -265,6 +344,8 @@ A "yes or no" answer can be done in the notification itself!
 > Graph of when push notifications get ignored
 >
 > Slack's Notification flow chart.
+
+-->
 
 <script>
 
