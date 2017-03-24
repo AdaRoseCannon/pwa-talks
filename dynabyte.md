@@ -9,6 +9,7 @@ scripts: [
 ]
 styles: [
 	'scripts/third-party/a-slides.css',
+	'styles/bird.css',
 ]
 ---
 
@@ -34,36 +35,84 @@ Browsers will notify the users that they can be installed.
 
 I am aiming this talk at everyone as good web app requires thoughts from both.
 
-<script>window.setDynamicSlide(window.elByEl());</script>
-
 <!-- This slide uses information from _config.yml -->
-<blockquote class="dark" style="background-image: url('images/bird1.jpg');">
-<div>
-<h1>{{ page.title }}</h1>
-<h3>{{ page.description }}</h3>
-<h2>{{site.author.name}} - {{site.author.company}}
-<br />
-@lady_ada_king, @samsunginternet
-</h2>
-</div>
-<div>
-<h1>Samsung Internet</h1>
-<p>
-<img src="https://pbs.twimg.com/profile_images/787926197971935232/-0aIDbJ3.jpg" style="border-radius: 10%;" />
-</p>
-</div>
-</blockquote>
+<blockquote style="background-image: url(&quot;images/lighthouse.jpg&quot;); display: block;">
+<h1 id="building-web-apps-1">Building Web Apps</h1>
+<img src="https://cdn.rawgit.com/alrra/browser-logos/1641cc3d/src/samsung-internet/samsung-internet.svg" alt="Samsung Internet Logo" style="width: 9em; float: right;">
+<h3 id="what-the-web-can-bring-to-apps">What the web can bring to Apps</h3>
+<h2 id="ada-rose-edwards---samsung-research-uk">Ada Rose Edwards - Samsung Research UK</h2>
+<h2 id="ladyadaking-samsunginternet">@lady_ada_king, @samsunginternet</h2>
+<span class="slide-view-button"> View Slide</span></blockquote>
 
-## A quick example install of a Web App
 
 
 <!-- This slide uses information from _config.yml -->
-<script>window.setDynamicSlide(window.playVideo);</script>
+<script>window._setNextSlide(window.playVideo);</script>
 <blockquote class="dark">
 <h1>A quick example of a web app:</h1>
-<video src="images/add-to-homescreen.m4v" autoplay="true" muted></video>
+<p>
+<video src="images/add-to-homescreen.mp4" autoplay="true" muted></video>
+</p>
 </blockquote>
 
+
+> # Increases Engagement
+>
+> <img src="images/leaving-export.png" style="filter: drop-shadow(0 0 1em rgba(0,0,0,0.4));" />
+
+<!-- This slide uses information from _config.yml -->
+> <blockquote style="position: absolute; background: linear-gradient(to bottom, rgba(47,79,79,1) 10%, rgba(47,79,79,0.5) 100%); padding-bottom: 2em; text-shadow: 0 0 0.3em darkslategrey;">
+> <p>(Left) Poster showing how to download an events app; and (right) how it could have looked if they used a website instead.</p>
+> <p>– Peter Gasston‏ (@stopsatgreen)</p>
+> </blockquote>
+>
+> ![How it could have been](images/sign.jpg)
+
+
+> <div style="display: flex;">
+> <div style="text-align: left;">
+> <h1>Cool Web Features</h1>
+> <ul style="list-style-type: none;">
+> <li>Instant Engagement</li>
+> <li>World Wide</li>
+> <li>Safe for users</li>
+> <li>Instant Deploy</li>
+> <li>Access via URLs</li>
+> <li>Accessibility</li>
+> </ul>
+> </div>
+> <div style="text-align: right;">
+> <h1>Cool App Features</h1>
+> <ul style="list-style-type: none;">
+> <li>Works Offline</li>
+> <li>Push Notifications</li>
+> <li>Background Sync</li>
+> <li>Icon on the Homescreen</li>
+> <li>No URL Bar</li>
+> <li>Not constrained to browser</li>
+> <li></li>
+> </ul>
+> </div>
+> </div>
+
+
+> <img src="images/ft-news.png" />
+
+> <img src="https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/images/add-to-home-screen.gif" alt="install banner gif"/>
+
+<script>_setNextSlide(elByEl());</script>
+> <div>
+> <h1>How do you define an App?</h1>
+> <h1 style="text-align: right;">It's in an App Store.</h1>
+> </div>
+> <div>
+> <h1>How do you define a Web Site?</h1>
+> <h1 style="text-align: right;">It's in the browser.</h1>
+> </div>
+> <div>
+> <h1>How do you define a Web App?</h1>
+> <h1 style="text-align: right;">Uhhh.....</h1>
+> </div>
 
 Web Apps provide many advantages:
 
@@ -81,6 +130,7 @@ If you have concerns about whether the Web has the features you need the web pla
 * Offline support
 * Push Notifications
 * Background Sync
+* Web Payment
 * WebGL
 * P2P Messaging
 * A myriad of other APIs for working with audio streams
@@ -113,22 +163,114 @@ But we want that sweet prompt and the ambient badging
 
 You need:
 
-> * https
+> * https (http2 for better speed)
 > * service Workers
 > * web app manifest
 >
 > Google's Lighthouse will test your app for how well it behaves like an app to rate it out of hundred to help you find anythign you missed
 
+* Describe what a service worker is
+
+* Describe how to set it up
+
+> ![The web as you know it today.](images/the-pwa-web1.svg)
+>
+> ![Apps can be show outside of a browser context](images/the-pwa-web2.svg)
+>
+> ![Service Workers can intercept network requests](images/the-pwa-web3.svg)
+>
+> ![Push notifications allow us to almost discard the front end entirely](images/the-pwa-web4.svg)
+> What is a service worker
 > # Setting up A Service Worker
+> JavaScript
+> HTML
 
 > # Setting up Push Notifications
 
-> # Responsive Design
+# Useful Patterns
+
+These are just tools, you don't have to stick to them rigidly.
+
+If you are already producing apps in a way that works for you and your customers stick with it.
+
+The Goals of these patterns are to get users engaged early, keep them engaged during that first session and to keep them coming back
+
+# PRPL
+
+Pattern for routing and precaching.
+
+The goal is to have a fast first load to avoid users on slow conneections giving up.
+
+Then have future loads happen almost instantaenously and have some even work when there is no connection.
+
+<ol style="font-size: 1.5em;" class="prpl">
+<li>Push critical resources for the initial route.</li>
+<li>Render initial route.</li>
+<li>Pre-cache remaining routes.</li>
+<li>Lazy-load and create remaining routes on demand.</li>
+</ol>
+
+# Web App Shell Model
+
+Shares many similarities with PRPL
+
+With a focus on seperating the app from the content.
+
+So that when the network fails the whole app works even if some of the content cannot be fetched.
+
+Pattern for content caching and what to prioritise.
+
+Send down pre-rendered first load,
+
+Long cache resources for the Application Shell
+
+If following the PRPL pattern then you can start precaching some future content.
+
+# Headless Web
+
+To me this is one of the more revolutionary patterns.
+
+You perform most of your user interactions via push notifications.
+
+Minimising drain on users attention, be useful and timely but not intrusive.
+
+Become an invaluable part of their phone experience and they will keep coming back.
+
+## Good Push Notifications
+
+The overarching theme here is: Inform the user, show them they have control.
+
+When to ask for permission, give context clues. Don't expect the user to trust you.
+
+Say what you are going to use them for and make it clear where they can reduce their notifications.
+
+
+Push notifications need to be timely. Don't alert for something that does not need immediate attention.
+
+Allow the user to not open your app.
+
+A "yes or no" answer can be done in the notification itself!
+
+
+
+
+
+> # Web App Patterns
+>
+> PRPL
+>
+> Web App Shell Model
+>
+> Headless Web
+>
+> Graph of when push notifications get ignored
+>
+> Slack's Notification flow chart.
 
 <script>
 
 	// Add links to deep link into slides
-	var blockquote = Array.from(document.querySelectorAll('blockquote'));
+	var blockquote = Array.from(document.querySelectorAll('body > blockquote'));
 	var newSpans = [];
 	document.querySelector('a[href="#aslides"]').addEventListener('click', function () {
 		newSpans.forEach(function (s) {
