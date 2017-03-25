@@ -9,7 +9,7 @@ scripts: [
 ]
 styles: [
 	'scripts/third-party/a-slides.css',
-	'styles/bird.css',
+	'styles/support-icons.css',
 ]
 ---
 
@@ -137,7 +137,9 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 		}
 	}
 });</script>
-<blockquote><img src="images/result.png" style="position: absolute;top: 0;left:0;right: 0;max-height: none;margin: 0;"></blockquote>
+<blockquote style="background: white !important;">
+<img src="images/result.png" style="position: absolute;top: 0;left:0;right: 0;max-height: none;margin: 0;">
+</blockquote>
 
 <script>_cssNextEl({
 	'font-size': '2.5em'
@@ -150,11 +152,13 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 > * Progressive Enhancement
 
 <blockquote style="background-color: #141414 !important; padding: 0;">
+<div class="support-icon-container" chrome samsung firefox edge safari>{% include browser-icons.html %}</div>
 <img src="images/responsive-design.jpg" style="position: absolute;top: 0;left:0;right: 0;max-height: 100%;margin: 0;width: 100%; box-sizing: border-box;" />
 </blockquote>
 
 <script>window.setDynamicSlide(window.elByEl());</script>
 <blockquote class="dark" style="background-image: url('images/bird9.jpg');">
+<div class="support-icon-container" chrome samsung firefox-wip edge-wip>{% include browser-icons.html %}</div>
 <h1>Web App Manifest</h1>
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"theme-color"</span> <span class="na">content=</span><span class="s">"#4E3F30"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"manifest"</span> <span class="na">href=</span><span class="s">"/static/manifest.json"</span><span class="nt">&gt;</span>
@@ -186,13 +190,22 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 
 <blockquote>
 <h1>Triggering Browser Install Prompts</h1>
+<div class="support-icon-container" chrome samsung firefox-wip edge-wip>{% include browser-icons.html %}</div>
 <img src="https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/images/add-to-home-screen.gif" alt="install banner gif"/>
 <h2>https://samsunginter.net/docs/ambient-badging.html</h2>
 </blockquote>
 
-> # Going offline
+<script>_setNextSlide(elByEl('.support-icon-container'));</script>
+<blockquote>
+<div class="support-icon-container" chrome samsung firefox edge-wip>{% include browser-icons.html %}</div>
+<img src="images/the-pwa-web1.svg" alt="The web as you know it today.">
+<img src="images/the-pwa-web2.svg" alt="Apps can be show outside of a browser context">
+<img src="images/the-pwa-web3.svg" alt="Service Workers can intercept network requests">
+<img src="images/the-pwa-web4.svg" alt="Push notifications allow us to almost discard the front end entirely">
+</blockquote>
 
 <blockquote style="justify-content: flex-end;padding: 0;">
+<div class="support-icon-container" chrome samsung firefox edge-wip>{% include browser-icons.html %}</div>
 <img src="images/slack-notification.png" style="position: absolute;top: 0;left:0;right: 0;max-height: none;margin: 0;width: 100%;">
 <h2 style="align-self: flex-end;background: linear-gradient(to top, rgba(47,79,79,1) 10%, rgba(47,79,79,0.5) 100%);text-shadow: 0 0 0.3em darkslategrey;z-index: 2;padding: 1em;box-sizing: border-box;margin: 0;font-size: 1.2em;">https://slack.engineering/reducing-slacks-memory-footprint-4480fec7e8eb#.br9mtzz2r</h2>
 </blockquote>
@@ -250,20 +263,6 @@ You need:
 * Describe what a service worker is
 
 * Describe how to set it up
-
-> ![The web as you know it today.](images/the-pwa-web1.svg)
->
-> ![Apps can be show outside of a browser context](images/the-pwa-web2.svg)
->
-> ![Service Workers can intercept network requests](images/the-pwa-web3.svg)
->
-> ![Push notifications allow us to almost discard the front end entirely](images/the-pwa-web4.svg)
-> What is a service worker
-> # Setting up A Service Worker
-> JavaScript
-> HTML
-
-> # Setting up Push Notifications
 
 # Useful Patterns
 

@@ -49,13 +49,17 @@ window.playVideo = {
 	}
 }
 
-window.elByEl = function () {
+window.elByEl = function (selector) {
 
 	var children;
 	var clone;
+	var preserve = [];
 
 	function replaceWithEl(el, target) {
 		target.innerHTML = '';
+		preserve.forEach(function (el) {
+			target.appendChild(el);
+		});
 		target.appendChild(el);
 	}
 
@@ -63,6 +67,12 @@ window.elByEl = function () {
 	var setUpFirstEl;
 
 	function init() {
+		var self = this;
+		preserve = Array.from(selector ? (this.querySelectorAll(selector) || []) : []);
+		preserve.forEach(function (el) {
+			self.removeChild(el);
+		});
+
 		children = Array.from(this.children);
 		var target = this;
 		clone = children.map(function (el) {
