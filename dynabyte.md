@@ -331,6 +331,24 @@ function storeSubscription(subscription) {
 > ## *https://github.com/web-push-libs/web-push*
 
 
+## Good Push Notifications
+
+The overarching theme here is: Inform the user, show them they have control.
+
+When to ask for permission, give context clues. Don't expect the user to trust you.
+
+Say what you are going to use them for and make it clear where they can reduce their notifications.
+
+
+Push notifications need to be timely. Don't alert for something that does not need immediate attention.
+
+Allow the user to not open your app.
+
+A "yes or no" answer can be done in the notification itself!
+
+
+
+
 <blockquote style="justify-content: flex-end;padding: 0;min-height: 600px;">
 <!--<h1 style="color: black;position: absolute;top:  0;z-index: 5;padding: 0.5em;box-sizing: border-box;text-shadow: none;font-size: 1.5em;text-shadow: 0 0 1em grey;">The hard part of notifications is choosing when not to send them...</h1>-->
 <img src="images/slack-notification.png" style="position: absolute;top: 0;left:0;right: 0;max-height: none;margin: 0;width: 100%;">
@@ -339,10 +357,25 @@ function storeSubscription(subscription) {
 
 > # Progressive Enhancement
 >
+> ## Browser vendors have different priorities.
+
+> # Future Web APIs coming soon to a browser near you
 >
+> ## Web Payment
+>
+> ## Web Assembly
+>
+> ## WebGL2
 
-> # Future Web APIs
+Some fun patterns it may be worth looking into:
 
+> # Web App Patterns (Secret slide)
+>
+> ## PRPL
+>
+> ## Web App Shell Model
+>
+> ## Headless Web
 <!--
 
 If you have concerns about whether the Web has the features you need the web platform has:
@@ -441,38 +474,6 @@ You perform most of your user interactions via push notifications.
 Minimising drain on users attention, be useful and timely but not intrusive.
 
 Become an invaluable part of their phone experience and they will keep coming back.
-
-## Good Push Notifications
-
-The overarching theme here is: Inform the user, show them they have control.
-
-When to ask for permission, give context clues. Don't expect the user to trust you.
-
-Say what you are going to use them for and make it clear where they can reduce their notifications.
-
-
-Push notifications need to be timely. Don't alert for something that does not need immediate attention.
-
-Allow the user to not open your app.
-
-A "yes or no" answer can be done in the notification itself!
-
-
-
-
-
-> # Web App Patterns
->
-> PRPL
->
-> Web App Shell Model
->
-> Headless Web
->
-> Graph of when push notifications get ignored
->
-> Slack's Notification flow chart.
-
 -->
 
 <script>
