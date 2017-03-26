@@ -158,8 +158,8 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 <img src="images/responsive-design.jpg" style="position: absolute;top: 0;left:0;right: 0;max-height: 100%;margin: 0;width: 100%; box-sizing: border-box;" />
 </blockquote>
 
-<script>window.setDynamicSlide(window.elByEl());</script>
-<blockquote class="dark" style="background-image: url('images/bird9.jpg');">
+<script>window.setDynamicSlide(window.elByEl('.support-icon-container'));</script>
+<blockquote class="dark" style="background-image: url('images/bird9.jpg'); padding-top: 3em;">
 <div class="support-icon-container" chrome samsung firefox-wip edge-wip>{% include browser-icons.html %}</div>
 <h1>Web App Manifest</h1>
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"theme-color"</span> <span class="na">content=</span><span class="s">"#4E3F30"</span><span class="nt">&gt;</span>
@@ -191,8 +191,7 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 </blockquote>
 
 <blockquote>
-<div class="support-icon-container" samsung style="padding-top: 1.5em;"><h3 style="margin: 0;position: absolute;top: 0;">Ambient Badging</h3>{% include browser-icons.html %}</div>
-<div class="support-icon-container" samsung chrome style="padding-top: 1.5em;"><h3 style="margin: 0;position: absolute;top: 0;">Installation Prompt</h3>{% include browser-icons.html %}</div>
+<div class="support-icon-container" samsung chrome edge-wip>{% include browser-icons.html %}</div>
 <h1>Triggering Browser Install Prompts</h1>
 <img src="https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/images/add-to-home-screen.gif" alt="install banner gif"/>
 <h2>https://samsunginter.net/docs/ambient-badging.html</h2>
@@ -376,6 +375,7 @@ Some fun patterns it may be worth looking into:
 > ## Web App Shell Model
 >
 > ## Headless Web
+
 <!--
 
 If you have concerns about whether the Web has the features you need the web platform has:
