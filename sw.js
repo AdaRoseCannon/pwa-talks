@@ -28,7 +28,6 @@ self.addEventListener('message', function(event) {
 	reply(event.data);
 });
 
-// Recieve messages from the client and reply back onthe same port
 self.addEventListener('fetch', function(event) {
 	const request = event.request;
 

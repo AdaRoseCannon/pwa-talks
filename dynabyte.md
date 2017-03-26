@@ -44,7 +44,9 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 <h2 id="ladyadaking-samsunginternet">@lady_ada_king, @samsunginternet</h2>
 <span class="slide-view-button"> View Slide</span></blockquote>
 
-
+<blockquote style="background-color: white;">
+<img src="images/StatCounter-browser-SE-monthly-201602-201702.png" />
+</blockquote>
 
 <!-- This slide uses information from _config.yml -->
 <script>window._setNextSlide(window.playVideo);</script>
@@ -189,8 +191,9 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 </blockquote>
 
 <blockquote>
+<div class="support-icon-container" samsung style="padding-top: 1.5em;"><h3 style="margin: 0;position: absolute;top: 0;">Ambient Badging</h3>{% include browser-icons.html %}</div>
+<div class="support-icon-container" samsung chrome style="padding-top: 1.5em;"><h3 style="margin: 0;position: absolute;top: 0;">Installation Prompt</h3>{% include browser-icons.html %}</div>
 <h1>Triggering Browser Install Prompts</h1>
-<div class="support-icon-container" chrome samsung firefox-wip edge-wip>{% include browser-icons.html %}</div>
 <img src="https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/images/add-to-home-screen.gif" alt="install banner gif"/>
 <h2>https://samsunginter.net/docs/ambient-badging.html</h2>
 </blockquote>
@@ -204,13 +207,124 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 <img src="images/the-pwa-web4.svg" alt="Push notifications allow us to almost discard the front end entirely">
 </blockquote>
 
+<script>_setNextSlide(elByEl('h1'));</script>
+> # Registering a Serivce Worker
+>
+> ```javascript
+ if ('serviceWorker' in navigator) {
+>
+ 		if (navigator.serviceWorker.controller) {
+>
+			// service worker already registered.
+ 			return navigator.serviceWorker.ready;
+ 		} else {
+>
+			// service worker not registered
+ 			return navigator.serviceWorker.register('/sw.js', {scope: './'})
+ 			.then(() => navigator.serviceWorker.ready);
+ 		}
+ 	}
+```
+>
+> ## The browser will start your Service Worker when a request is made in your service worker's scope
+>
+> ## The browser may stop your worker at any point if it is not being used.
+>
+> ## The service worker can intercept any fetch request made by the browser.
+
+<script>_setNextSlide(elByEl('h1'));</script>
+> # Intercepting Network requests
+>
+> ```javascript
+self.addEventListener('fetch', function(event) {
+	const request = event.request;
+>
+	// Let videos go straight to the network
+	if (request.url.match(/(\.mp4|\.webm|\.avi|\.wmv|\.m4v)$/i)) {
+		return;
+	}
+>
+	// Generate Response here
+	if (request.url.match(/^https:\/\/ada.is\/static\//i)) {
+
+		// doSomething, returns promise which resolves to a Response
+		const response = doSomething(request);
+		return event.respondWith(response);
+	}
+});
+```
+>
+> * cache responses for speed
+> * cache responses to work offline
+> * create new responses
+> * precache static resources on app start
+
+> # Push Notifications
+> <div class="support-icon-container" chrome samsung firefox edge-wip>{% include browser-icons.html %}</div>
+>
+> <img src="images/notification.png" />
+
+> # 3 steps to Push Notifications:
+>
+> 1. Request permission
+> 2. Get endpoint & token, save to server
+> 3. On the server make an API call on the endpoint with your notification
+
+<script>_setNextSlide(elByEl('h1'));</script>
+> # Get permission
+>
+> > NB in Chrome and Samsung Internet you need to register on *firebase cloud messaging* and add your project's id to your web app manifest.
+> >
+> > `gcm_sender_id": "103953800507"`
+>
+> ```javascript
+// Has to occur with user input
+myButton.addEventListener('click', function () {
+>
+	navigator.serviceWorker.ready.then(function () {
+>
+		reg.pushManager.subscribe({
+			userVisibleOnly: true // declare we will use push for notifications
+		}).then(function success(subscription) {
+>
+			// Tell user we are good to go
+			storeSubscription(subscription); // see next slide
+		}, function error() {
+>
+			// User may have declined or the browser or OS may have refused
+		});
+	});
+});
+```
+
+> # Save token to server
+>
+ > ```json
+ {
+  "endpoint": "http://example.com/some/uuid"
+ }
+```
+>
+> <div><p>In this case the url looks something like:</p>
+> <span style="word-break: break-all; font-family: monospace; font-size: 0.8em;">"https://android.googleapis.com/gcm/send/
+> cz6YgbRXHAc:APA91bGWtm35_kAQsZEn_Ye…EVXj1
+> MDXGulbtBWJYw4AGcIWXq7p5BjhFhnDhMQoqOHRzY
+> 9jI_OeOn_DQ5W_cYD5tCDDdjOD7d"</span></div>
+>
+> ```javascript
+function storeSubscription(subscription) {
+
+}
+```
+
 <blockquote style="justify-content: flex-end;padding: 0;">
-<div class="support-icon-container" chrome samsung firefox edge-wip>{% include browser-icons.html %}</div>
 <img src="images/slack-notification.png" style="position: absolute;top: 0;left:0;right: 0;max-height: none;margin: 0;width: 100%;">
 <h2 style="align-self: flex-end;background: linear-gradient(to top, rgba(47,79,79,1) 10%, rgba(47,79,79,0.5) 100%);text-shadow: 0 0 0.3em darkslategrey;z-index: 2;padding: 1em;box-sizing: border-box;margin: 0;font-size: 1.2em;">https://slack.engineering/reducing-slacks-memory-footprint-4480fec7e8eb#.br9mtzz2r</h2>
 </blockquote>
 
 > # Progressive Enhancement
+>
+>
 
 > # Future Web APIs
 
