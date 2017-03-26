@@ -305,19 +305,34 @@ myButton.addEventListener('click', function () {
  }
 ```
 >
-> <div><p>In this case the url looks something like:</p>
-> <span style="word-break: break-all; font-family: monospace; font-size: 0.8em;">"https://android.googleapis.com/gcm/send/
-> cz6YgbRXHAc:APA91bGWtm35_kAQsZEn_Ye…EVXj1
-> MDXGulbtBWJYw4AGcIWXq7p5BjhFhnDhMQoqOHRzY
-> 9jI_OeOn_DQ5W_cYD5tCDDdjOD7d"</span></div>
+> <p style="display: block;">In this case the url looks something like:
+> <span style="word-break: break-all; font-family: monospace; font-size: 0.8em;">https://android.googleapis.com/gcm/send/cz6YgbRXHAc:APA91bGWtm35_kAQsZEn_Ye…EVXj1MDXGulbtBWJYw4AGcIWXq7p5BjhFhnDhMQoqOHRzY9jI_OeOn_DQ5W_cYD5tCDDdjOD7d</span></p>
 >
 > ```javascript
 function storeSubscription(subscription) {
-
+	return fetch('/api/send-message', {
+		method: 'POST',
+		credentials: 'same-origin',
+		headers: new Headers({
+			'Content-Type': 'application/json',
+			'Accept': 'application/json'
+		}),
+		body: JSON.stringify(subscription)
+	})
 }
 ```
 
-<blockquote style="justify-content: flex-end;padding: 0;">
+> # Using that token on the server:
+>
+> ## Ideally make a post request to the endpoint.
+>
+> ## **BUT** differing implementations make this a little awkward so I use:
+>
+> ## *https://github.com/web-push-libs/web-push*
+
+
+<blockquote style="justify-content: flex-end;padding: 0;min-height: 600px;">
+<!--<h1 style="color: black;position: absolute;top:  0;z-index: 5;padding: 0.5em;box-sizing: border-box;text-shadow: none;font-size: 1.5em;text-shadow: 0 0 1em grey;">The hard part of notifications is choosing when not to send them...</h1>-->
 <img src="images/slack-notification.png" style="position: absolute;top: 0;left:0;right: 0;max-height: none;margin: 0;width: 100%;">
 <h2 style="align-self: flex-end;background: linear-gradient(to top, rgba(47,79,79,1) 10%, rgba(47,79,79,0.5) 100%);text-shadow: 0 0 0.3em darkslategrey;z-index: 2;padding: 1em;box-sizing: border-box;margin: 0;font-size: 1.2em;">https://slack.engineering/reducing-slacks-memory-footprint-4480fec7e8eb#.br9mtzz2r</h2>
 </blockquote>
