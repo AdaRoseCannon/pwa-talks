@@ -124,13 +124,13 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 <script>_setNextSlide({
 	setup: function () {
 		this.img = this.img || this.querySelector('img');
-		this.img.style.transform = 'scale(2)';
+		this.img.style.transform = 'scale(1.5)';
 		this.img.style.transformOrigin = '0 0';
 	},
 	action: function *() {
 		yield;
 		this.img.style.transition = 'transform 5s ease-in'
-		this.img.style.transform = 'translateY(-100%) translateY(100vh) translateY(-3em)';
+		this.img.style.transform = 'translateY(-150%) translateY(100vh) translateY(-3em) scale(1.5)';
 		yield;
 	},
 	teardown : function () {
@@ -147,22 +147,30 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 	'font-size': '2.5em'
 });</script>
 > * Responsively Designed
+> * Performance
 > * Web App Manifest
 > * Triggers Browser Install Prompts
 > * Going Offline
 > * Push Notifications
 > * Progressive Enhancement
 
+<script>window.setDynamicSlide(window.elByEl('.support-icon-container'));</script>
 <blockquote style="background-color: #141414 !important; padding: 0;">
 <div class="support-icon-container" chrome samsung firefox edge safari>{% include browser-icons.html %}</div>
 <img src="images/responsive-design.jpg" style="position: absolute;top: 0;left:0;right: 0;max-height: 100%;margin: 0;width: 100%; box-sizing: border-box;" />
+<div class="highlighter-rouge" style="margin:4em 2em;"><pre class="highlight"><code>	<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"MobileOptimized"</span> <span class="na">content=</span><span class="s">"width"</span> <span class="nt">/&gt;</span>
+	<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0, minimal-ui"</span> <span class="nt">/&gt;</span>
+	<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"HandheldFriendly"</span> <span class="na">content=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
 </blockquote>
 
 <script>window.setDynamicSlide(window.elByEl('.support-icon-container'));</script>
 <blockquote class="dark" style="background-image: url('images/bird9.jpg'); padding-top: 3em;">
 <div class="support-icon-container" chrome samsung firefox-wip edge-wip>{% include browser-icons.html %}</div>
 <h1>Web App Manifest</h1>
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"theme-color"</span> <span class="na">content=</span><span class="s">"#4E3F30"</span><span class="nt">&gt;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"apple-mobile-web-app-capable"</span> <span class="na">content=</span><span class="s">"yes"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"theme-color"</span> <span class="na">content=</span><span class="s">"#4E3F30"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"manifest"</span> <span class="na">href=</span><span class="s">"/static/manifest.json"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://podle.ada.is/static/icon192.png"</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">sizes=</span><span class="s">"192x192"</span> <span class="nt">/&gt;</span>
 </code></pre>
@@ -193,7 +201,10 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 <blockquote>
 <div class="support-icon-container" samsung chrome edge-wip>{% include browser-icons.html %}</div>
 <h1>Triggering Browser Install Prompts</h1>
+<p>
+<img src="images/ambient-badging.png" />
 <img src="https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/images/add-to-home-screen.gif" alt="install banner gif"/>
+</p>
 <h2>https://samsunginter.net/docs/ambient-badging.html</h2>
 </blockquote>
 
@@ -247,8 +258,8 @@ self.addEventListener('fetch', function(event) {
 	if (request.url.match(/^https:\/\/ada.is\/static\//i)) {
 >
 		// doSomething, returns promise which resolves to a Response
-		const response = doSomething(request);
-		return event.respondWith(response);
+		const responsePromise = doSomething(request);
+		return event.respondWith(responsePromise);
 	}
 });
 ```
@@ -263,11 +274,12 @@ self.addEventListener('fetch', function(event) {
 >
 > <img src="images/notification.png" />
 
-> # 3 steps to Push Notifications:
+> # 4 steps to Push Notifications:
 >
 > 1. Request permission
 > 2. Get endpoint & token, save to server
 > 3. On the server make an API call on the endpoint with your notification
+> 4. In the service worker listen for 'push' events and make a notification
 
 <script>_setNextSlide(elByEl('h1'));</script>
 > # Get permission
@@ -328,6 +340,27 @@ function storeSubscription(subscription) {
 > ## **BUT** differing implementations make this a little awkward so I use:
 >
 > ## *https://github.com/web-push-libs/web-push*
+
+> # Making a notification
+>
+>```javascript
+>
+self.addEventListener('push', function (event) {
+>
+	const noti = self.registration.showNotification('Podcast updated', {
+		icon: 'https://podle.ada.is/static/icon192.png',
+		data: {title: 'Hello World'},
+		body: 'Lorem Ipsum'
+	});
+>
+	event.waitUntil(noti);
+});
+>
+self.addEventListener('notificationclick', function(event) {
+	event.notification.close();
+	clients.openWindow('/');
+});
+```
 
 
 ## Good Push Notifications
