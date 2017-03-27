@@ -71,7 +71,7 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 > ![How it could have been](images/sign.jpg)
 
 
-> <div style="display: flex; flex-direction: row; align-items; auto;">
+> <div style="display: flex; flex-direction: row; align-items; auto; font-size: 1.5em;">
 > <div style="text-align: left;">
 > <h1>Cool Web Features</h1>
 > <ul style="list-style-type: none;">
@@ -198,7 +198,7 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 </blockquote>
 
 <script>_setNextSlide(elByEl('.support-icon-container'));</script>
-<blockquote>
+<blockquote style="background: lavenderblush !important;">
 <div class="support-icon-container" chrome samsung firefox edge-wip>{% include browser-icons.html %}</div>
 <img src="images/the-pwa-web1.svg" alt="The web as you know it today.">
 <img src="images/the-pwa-web2.svg" alt="Apps can be show outside of a browser context">
@@ -207,7 +207,7 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 </blockquote>
 
 <script>_setNextSlide(elByEl('h1'));</script>
-> # Registering a Serivce Worker
+> # Registering a Service Worker
 >
 > ```javascript
  if ('serviceWorker' in navigator) {
@@ -245,7 +245,7 @@ self.addEventListener('fetch', function(event) {
 >
 	// Generate Response here
 	if (request.url.match(/^https:\/\/ada.is\/static\//i)) {
-
+>
 		// doSomething, returns promise which resolves to a Response
 		const response = doSomething(request);
 		return event.respondWith(response);
@@ -348,9 +348,9 @@ A "yes or no" answer can be done in the notification itself!
 
 
 
-<blockquote style="justify-content: flex-end;padding: 0;min-height: 600px;">
+<blockquote style="justify-content: flex-end;padding: 0;min-height: 600px;background-color: white !important;">
 <!--<h1 style="color: black;position: absolute;top:  0;z-index: 5;padding: 0.5em;box-sizing: border-box;text-shadow: none;font-size: 1.5em;text-shadow: 0 0 1em grey;">The hard part of notifications is choosing when not to send them...</h1>-->
-<img src="images/slack-notification.png" style="position: absolute;top: 0;left:0;right: 0;max-height: none;margin: 0;width: 100%;">
+<img src="images/slack-notification.png" style="position: absolute;top: 0;left:0;right: 0;max-height: none;margin: 0;width: 100%;object-fit: contain;height: 100%;">
 <h2 style="align-self: flex-end;background: linear-gradient(to top, rgba(47,79,79,1) 10%, rgba(47,79,79,0.5) 100%);text-shadow: 0 0 0.3em darkslategrey;z-index: 2;padding: 1em;box-sizing: border-box;margin: 0;font-size: 1.2em;">https://slack.engineering/reducing-slacks-memory-footprint-4480fec7e8eb#.br9mtzz2r</h2>
 </blockquote>
 
@@ -359,6 +359,8 @@ A "yes or no" answer can be done in the notification itself!
 > ## Browser vendors have different priorities.
 
 > # Future Web APIs coming soon to a browser near you
+>
+> ## Web Share
 >
 > ## Web Payment
 >

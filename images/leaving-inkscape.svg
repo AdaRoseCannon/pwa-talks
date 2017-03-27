@@ -27,8 +27,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="257.37384"
-     inkscape:cy="436.00249"
+     inkscape:cx="-18.340446"
+     inkscape:cy="433.14535"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -57,7 +57,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -87,7 +87,7 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot4178"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:lato;-inkscape-font-specification:lato;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:lato;-inkscape-font-specification:lato;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        transform="translate(-2,52)"><flowRegion
          id="flowRegion4180"><rect
            id="rect4182"
@@ -95,11 +95,11 @@
            height="100"
            x="120"
            y="72.362206"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:lato;-inkscape-font-specification:lato;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:lato;-inkscape-font-specification:lato;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;" /></flowRegion><flowPara
          id="flowPara4184">Land on Your Website</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot4186"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:lato;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:lato;font-stretch:normal;font-variant:normal;"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:lato;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:lato;font-stretch:normal;font-variant:normal;"
        transform="translate(82.857143,11.428571)"><flowRegion
          id="flowRegion4188"><rect
            id="rect4190"
@@ -107,11 +107,11 @@
            height="80"
            x="400"
            y="352.36221"
-           style="-inkscape-font-specification:lato;font-family:lato;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#ffffff;fill-opacity:1;" /></flowRegion><flowPara
+           style="-inkscape-font-specification:lato;font-family:lato;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#000000;fill-opacity:1;" /></flowRegion><flowPara
          id="flowPara4194">Leave</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot4198"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:lato;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:lato;font-stretch:normal;font-variant:normal;"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:lato;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:lato;font-stretch:normal;font-variant:normal;"
        transform="translate(0,-14)"><flowRegion
          id="flowRegion4200"><rect
            id="rect4202"
@@ -119,10 +119,10 @@
            height="99.999992"
            x="120"
            y="432.36221"
-           style="-inkscape-font-specification:lato;font-family:lato;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#ffffff;fill-opacity:1;" /></flowRegion><flowPara
+           style="-inkscape-font-specification:lato;font-family:lato;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#000000;fill-opacity:1;" /></flowRegion><flowPara
          id="flowPara4204"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:lato;-inkscape-font-specification:lato;fill:#ffffff;fill-opacity:1;"><flowSpan
-   style="text-align:center;text-anchor:middle;-inkscape-font-specification:lato;font-family:lato;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#ffffff;fill-opacity:1;"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:lato;-inkscape-font-specification:lato;fill:#000000;fill-opacity:1;"><flowSpan
+   style="text-align:center;text-anchor:middle;-inkscape-font-specification:lato;font-family:lato;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#000000;fill-opacity:1;"
    id="flowSpan4206">Open App </flowSpan>Store</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot4208"
@@ -138,7 +138,7 @@
          id="flowPara4214">Decide not to Install</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot4216"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:lato;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:lato;font-stretch:normal;font-variant:normal;"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:lato;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:lato;font-stretch:normal;font-variant:normal;"
        transform="translate(0,-6)"><flowRegion
          id="flowRegion4218"><rect
            id="rect4220"
@@ -146,7 +146,7 @@
            height="100.00002"
            x="120"
            y="632.36218"
-           style="text-align:center;text-anchor:middle;-inkscape-font-specification:lato;font-family:lato;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#ffffff;fill-opacity:1;" /></flowRegion><flowPara
+           style="text-align:center;text-anchor:middle;-inkscape-font-specification:lato;font-family:lato;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#000000;fill-opacity:1;" /></flowRegion><flowPara
          id="flowPara4222">Install App</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot4224"
