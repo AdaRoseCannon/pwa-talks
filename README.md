@@ -43,7 +43,7 @@ It should work with slide remotes and a wii mote on supported platforms
 * If you hae multiple tabs open (in a broser which supports a service worker), press parent in the control bar and it will control all the other tabs
 
 <!-- This slide uses information from _config.yml and the page settings -->
-<blockquote class="dark" id="splash-slide" style="background-image: url('images/bird1.jpg');">
+<blockquote class="dark" id="splash-slide" style="background-image: url('images/pattern.svg');">
 <h1>{{ page.title }}</h1>
 <h3>{{ page.description }}</h3>
 <h2>{{site.author.name}} - {{site.author.company}}</h2>
