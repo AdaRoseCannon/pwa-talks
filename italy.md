@@ -15,6 +15,8 @@ styles: [
 
 # {{page.title}}
 
+25 mins + 5 qa
+
 <!-- Link to trigger conversion script -->
 [Convert to Slide Deck](#aslides)
 
@@ -35,20 +37,33 @@ Browsers will notify the users that they can be installed.
 
 I am aiming this talk at everyone as good web app requires thoughts from both.
 
-<!-- This slide uses information from _config.yml -->
 <blockquote style="background-image: url(&quot;images/lighthouse.jpg&quot;); display: block;">
 <h1 id="building-web-apps-1">Building Web Apps</h1>
-<img src="https://cdn.rawgit.com/alrra/browser-logos/1641cc3d/src/samsung-internet/samsung-internet.svg" alt="Samsung Internet Logo" style="width: 9em; float: right;">
+<img src="https://cdn.rawgit.com/alrra/browser-logos/master/src/samsung-internet/samsung-internet.svg" alt="Samsung Internet Logo" style="width: 8em; float: right;">
 <h3 id="what-the-web-can-bring-to-apps">What the web can bring to Apps</h3>
 <h2 id="ada-rose-edwards---samsung-research-uk">Ada Rose Edwards - Samsung Research UK</h2>
 <h2 id="ladyadaking-samsunginternet">@lady_ada_king, @samsunginternet</h2>
 <span class="slide-view-button"> View Slide</span></blockquote>
 
+<script>window._setNextSlide(window.elByEl());</script>
+> <h1 style="font-size: 25vmin;">Web Apps...</h1>
+>
+> <div><h1 style="font-size: 20vmin;">What is a web App?</h1><h1 style="font-size: 40vmin;">🤷</h1></div>
+>
+> <div>
+> <h1 style="font-size: 25vmin;">Who's involved?</h1>
+> <span style="display: flex; max-width: 100%; flex-grow: 1;">
+> <img src="https://cdn.rawgit.com/alrra/browser-logos/master/src/chrome/chrome.svg" crossorigin="anonymous" />
+> <img src="https://cdn.rawgit.com/alrra/browser-logos/master/src/firefox/firefox.svg" crossorigin="anonymous" />
+> <img src="https://cdn.rawgit.com/alrra/browser-logos/master/src/edge/edge.svg" crossorigin="anonymous" />
+> <img src="https://cdn.rawgit.com/alrra/browser-logos/master/src/samsung-internet/samsung-internet.svg" crossorigin="anonymous" />
+> </span>
+> </div> 
+
 <blockquote style="background-color: white;">
 <img src="images/StatCounter-browser-IT-monthly-201604-201704.png" />
 </blockquote>
 
-<!-- This slide uses information from _config.yml -->
 <script>window._setNextSlide(window.playVideo);</script>
 <blockquote class="dark">
 <h1>A quick example of a web app:</h1>
@@ -57,18 +72,21 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 </p>
 </blockquote>
 
+<script>window._setNextSlide(window.iframeSlide)</script>
+> <iframe data-src="https://www.youtube.com/embed/maYqioxJ2TM?autoplay=1" frameborder="0" allowfullscreen></iframe>
 
-> # Increases Engagement
+<script>window._setNextSlide(window.elByEl());</script>
+> <h1>Web Apps look to solve an engagement problem...</h1>
 >
-> <img src="images/leaving-export.png" style="filter: drop-shadow(0 0 1em rgba(0,0,0,0.4));" />
-
-<!-- This slide uses information from _config.yml -->
-> <blockquote style="position: absolute; background: linear-gradient(to bottom, rgba(47,79,79,1) 10%, rgba(47,79,79,0.5) 100%); padding-bottom: 2em; text-shadow: 0 0 0.3em darkslategrey;">
+> <div style="position: absolute; top: 0; left:0; width: 100%; height: 100%;">
+> <blockquote style="position: absolute; background: linear-gradient(to bottom, rgba(47,79,79,1) 10%, rgba(47,79,79,0.5) 100%); padding-bottom: 0.5em; text-shadow: 0 0 0.3em darkslategrey; margin: 0;">
 > <p>(Left) Poster showing how to download an events app; and (right) how it could have looked if they used a website instead.</p>
-> <p>– Peter Gasston‏ (@stopsatgreen)</p>
 > </blockquote>
 >
-> ![How it could have been](images/sign.jpg)
+> <img src="images/sign.jpg" style="margin-top: 1em; object-position: bottom;"/>
+> <span style="margin: 0 0 0.3em 0.3em;"> - Peter Gasston‏ (@stopsatgreen)</span>
+> </div>
+> <img src="images/leaving-export.png" style="filter: drop-shadow(0 0 1em rgba(0,0,0,0.4));" />
 
 
 > <div style="display: flex; flex-direction: row; align-items; auto; font-size: 1.5em;">
@@ -154,7 +172,7 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 > * Push Notifications
 > * Progressive Enhancement
 
-<script>window.setDynamicSlide(window.elByEl('.support-icon-container'));</script>
+<script>window.setDynamicSlide(window.elByEl({preserve: '.support-icon-container'}));</script>
 <blockquote style="background-color: #141414 !important; padding: 0;">
 <div class="support-icon-container" chrome samsung firefox edge safari>{% include browser-icons.html %}</div>
 <img src="images/responsive-design.jpg" style="position: absolute;top: 0;left:0;right: 0;max-height: 100%;margin: 0;width: 100%; box-sizing: border-box;" />
@@ -165,7 +183,7 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 </div>
 </blockquote>
 
-<script>window.setDynamicSlide(window.elByEl('.support-icon-container'));</script>
+<script>window.setDynamicSlide(window.elByEl({preserve: '.support-icon-container'}));</script>
 <blockquote class="dark" style="background-image: url('images/bird9.jpg'); padding-top: 3em;">
 <div class="support-icon-container" chrome samsung firefox-wip edge-wip>{% include browser-icons.html %}</div>
 <h1>Web App Manifest</h1>
@@ -208,7 +226,7 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 <h2>https://samsunginter.net/docs/ambient-badging.html</h2>
 </blockquote>
 
-<script>_setNextSlide(elByEl('.support-icon-container'));</script>
+<script>_setNextSlide(elByEl({preserve: '.support-icon-container'}));</script>
 <blockquote style="background: lavenderblush !important;">
 <div class="support-icon-container" chrome samsung firefox edge-wip>{% include browser-icons.html %}</div>
 <img src="images/the-pwa-web1.svg" alt="The web as you know it today.">
@@ -217,7 +235,7 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 <img src="images/the-pwa-web4.svg" alt="Push notifications allow us to almost discard the front end entirely">
 </blockquote>
 
-<script>_setNextSlide(elByEl('h1'));</script>
+<script>_setNextSlide(elByEl({preserve: 'h1'}));</script>
 > # Registering a Service Worker
 >
 > ```javascript
@@ -242,7 +260,7 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 >
 > ## The service worker can intercept any fetch request made by the browser.
 
-<script>_setNextSlide(elByEl('h1'));</script>
+<script>_setNextSlide(elByEl({preserve: 'h1'}));</script>
 > # Intercepting Network requests
 >
 > ```javascript
@@ -281,7 +299,7 @@ self.addEventListener('fetch', function(event) {
 > 3. On the server make an API call on the endpoint with your notification
 > 4. In the service worker listen for 'push' events and make a notification
 
-<script>_setNextSlide(elByEl('h1'));</script>
+<script>_setNextSlide(elByEl({preserve: 'h1'}));</script>
 > # Get permission
 >
 > > NB in Chrome and Samsung Internet you need to register on *firebase cloud messaging* and add your project's id to your web app manifest.
@@ -512,6 +530,35 @@ Become an invaluable part of their phone experience and they will keep coming ba
 -->
 
 <script>
+	// Fancy Emojis
+	window._addScript('https://twemoji.maxcdn.com/2/twemoji.min.js')().then(function () {
+		twemoji.parse(document.body, {
+			folder: 'svg',
+			ext: '.svg'
+		});
+	});
+	var iframes = Array.from(document.querySelectorAll('iframe'));
+	var blank = 'about:blank';
+	iframes.forEach(function (iframe) {
+		var button = document.createElement('button');
+		var src = iframe.src || iframe.dataset.src;
+		iframe.src = blank;
+		iframe.dataset.src = src;
+		button.addEventListener('click', function () {
+			iframe.src = iframe.src === blank ? src : blank;
+			if (iframe.src === blank) {
+				button.classList.add('blank');
+				button.textContent = "Load iFrame";
+			} else {
+				button.classList.remove('blank');
+				button.textContent = "Unload iFrame";
+			}
+		});
+		button.classList.add('iframe-button');
+		button.classList.add('blank');
+		button.textContent = "Load iFrame";
+		iframe.after(button);
+	});
 
 	// Add links to deep link into slides
 	var blockquote = Array.from(document.querySelectorAll('body > blockquote'));

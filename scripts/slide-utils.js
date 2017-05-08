@@ -30,10 +30,11 @@ window.FakeGenerator = function FakeGenerator(arr) {
  */
 window.iframeSlide = {
 	setup: function () {
-		var iframe = this.querySelector('iframe');
-		iframe.src = iframe.dataset.src;
+		this.querySelector('iframe').src = 'about:blank';
 	},
-	action: window.FakeGenerator([ function() {} ]),
+	action: window.FakeGenerator([ function() {
+		this.querySelector('iframe').src = this.querySelector('iframe').dataset.src;
+	} ]),
 	teardown: function () { this.querySelector('iframe').src = 'about:blank'; }
 };
 
