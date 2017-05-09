@@ -6,6 +6,7 @@ scripts: [
 	'scripts/post-to-slides.js',
 	'scripts/slide-utils.js',
 	'scripts/third-party/dirty-dom-lib.min.js',
+	'scripts/third-party/qrcode.min.js',
 ]
 styles: [
 	'scripts/third-party/a-slides.css',
@@ -46,12 +47,29 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 <span class="slide-view-button"> View Slide</span></blockquote>
 
 <script>window._setNextSlide(window.elByEl());</script>
-> <h1 style="font-size: 25vmin;">Web Apps...</h1>
+> <h1 style="font-size: 8vw;">Web Apps...</h1>
 >
-> <div><h1 style="font-size: 20vmin;">What is a web App?</h1><h1 style="font-size: 40vmin;">🤷</h1></div>
+> <div><h1 style="font-size: 8vw;">What is a web App?</h1><h1 style="font-size: 40vmin;">🤷</h1></div>
+>
+> <div style="font-size: 5vw;">
+> <h1>How do you define an App?</h1>
+> <h1 style="text-align: right;">It's in an App Store.</h1>
+> </div>
+> <div style="font-size: 5vw;">
+> <h1>How do you define a Web Site?</h1>
+> <h1 style="text-align: right;">It's in the browser.</h1>
+> </div>
+> <div style="font-size: 5vw;">
+> <h1>How do you define a Web App?</h1>
+> <h1 style="text-align: right;">Uhhh.....</h1>
+> </div>
+>
+> <div style="justify-content: center;"><h1 style="font-size: 25vmin; color: transparent; text-shadow: 0 0 0.2em white; text-align: center; margin: 0;">Web App</h1></div>
+>
+> <h1 style="font-size: 5vw; text-align: center;">Not defined by one API or technology</h1>
 >
 > <div>
-> <h1 style="font-size: 25vmin;">Who's involved?</h1>
+> <h1 style="font-size: 10vw;">Who's involved?</h1>
 > <span style="display: flex; max-width: 100%; flex-grow: 1;">
 > <img src="https://cdn.rawgit.com/alrra/browser-logos/master/src/chrome/chrome.svg" crossorigin="anonymous" />
 > <img src="https://cdn.rawgit.com/alrra/browser-logos/master/src/firefox/firefox.svg" crossorigin="anonymous" />
@@ -86,8 +104,8 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 > <img src="images/sign.jpg" style="margin-top: 1em; object-position: bottom;"/>
 > <span style="margin: 0 0 0.3em 0.3em;"> - Peter Gasston‏ (@stopsatgreen)</span>
 > </div>
-> <img src="images/leaving-export.png" style="filter: drop-shadow(0 0 1em rgba(0,0,0,0.4));" />
-
+> <div><img src="images/leaving-export.png" style="margin: 0; filter: drop-shadow(0 0 1em rgba(0,0,0,0.4));" /></div>
+> <div><img src="images/alex-russel-engagement-tweet.png" style="margin: 0; filter: drop-shadow(0 0 1em rgba(0,0,0,0.4));" /></div>
 
 > <div style="display: flex; flex-direction: row; align-items; auto; font-size: 1.5em;">
 > <div style="text-align: left;">
@@ -115,29 +133,14 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 > </div>
 > </div>
 
-
-> <img src="images/ft-news.png" />
-
-<script>_setNextSlide(elByEl());</script>
-> <div>
-> <h1>How do you define an App?</h1>
-> <h1 style="text-align: right;">It's in an App Store.</h1>
-> </div>
-> <div>
-> <h1>How do you define a Web Site?</h1>
-> <h1 style="text-align: right;">It's in the browser.</h1>
-> </div>
-> <div>
-> <h1>How do you define a Web App?</h1>
-> <h1 style="text-align: right;">Uhhh.....</h1>
-> </div>
-
-
+<script>window._setNextSlide(window.elByEl());</script>
 <blockquote style="background: linear-gradient(to bottom, rgb(29, 23, 66) 0%, rgb(30, 30, 119) 40%, rgb(62, 43, 47) 100%);">
+<div style="justify-content: center; text-align: center;"><h1>Quantifying This</h1></div>
+<div>
 <img src="images/lighthouse-logo.svg" />
 <h2 style="text-align: center;">Google Lighthouse</h2>
+</div>
 </blockquote>
-
 
 <script>_setNextSlide({
 	setup: function () {
@@ -156,14 +159,17 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 			this.img.style.transition = 'none';
 		}
 	}
-});</script>
+});
+</script>
 <blockquote style="background: white !important;">
 <img src="images/result.png" style="position: absolute;top: 0;left:0;right: 0;max-height: none;margin: 0;">
 </blockquote>
 
 <script>_cssNextEl({
 	'font-size': '2.5em'
-});</script>
+});
+</script>
+
 > * Responsively Designed
 > * Performance
 > * Web App Manifest
@@ -184,39 +190,50 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 </blockquote>
 
 <script>window.setDynamicSlide(window.elByEl({preserve: '.support-icon-container'}));</script>
-<blockquote class="dark" style="background-image: url('images/bird9.jpg'); padding-top: 3em;">
-<div class="support-icon-container" chrome samsung firefox-wip edge-wip>{% include browser-icons.html %}</div>
-<h1>Web App Manifest</h1>
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"apple-mobile-web-app-capable"</span> <span class="na">content=</span><span class="s">"yes"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"theme-color"</span> <span class="na">content=</span><span class="s">"#4E3F30"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"manifest"</span> <span class="na">href=</span><span class="s">"/static/manifest.json"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://podle.ada.is/static/icon192.png"</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">sizes=</span><span class="s">"192x192"</span> <span class="nt">/&gt;</span>
-</code></pre>
-</div>
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Podle"</span><span class="p">,</span><span class="w">
-</span><span class="nt">"icons"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-	</span><span class="p">{</span><span class="w">
-		</span><span class="nt">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/static/icon192.png"</span><span class="p">,</span><span class="w">
-		</span><span class="nt">"sizes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"192x192"</span><span class="p">,</span><span class="w">
-		</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image/png"</span><span class="w">
-	</span><span class="p">},</span><span class="w">
-	</span><span class="p">{</span><span class="w">
-		</span><span class="nt">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/static/icon512.png"</span><span class="p">,</span><span class="w">
-		</span><span class="nt">"sizes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"512x512"</span><span class="p">,</span><span class="w">
-		</span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image/png"</span><span class="w">
-	</span><span class="p">}</span><span class="w">
-</span><span class="p">],</span><span class="w">
-	</span><span class="nt">"start_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v7/"</span><span class="p">,</span><span class="w">
-	</span><span class="nt">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"standalone"</span><span class="p">,</span><span class="w">
-	</span><span class="nt">"background_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w">
-	</span><span class="nt">"theme_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#4E3F30"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
-</blockquote>
 
+> <div class="support-icon-container" chrome samsung firefox-wip edge-wip>{% include browser-icons.html %}</div>
+>
+> <div style="justify-content:center; text-align: center;">
+> <h1 style="font-size: 2em; margin: 0;">Geting an icon on the homescreen</h1>
+> <h2 style="margin: 1em 0;">~ With ~</h2>
+> <h1 style="margin: 0;">Web App Manifest</h1>
+> </div>
+>
+> ```html
+> <!-- Safari -->
+> <meta name="apple-mobile-web-app-capable" content="yes">
+> <link href="https://podle.ada.is/static/icon192.png" rel="icon" sizes="192x192" />
+>
+> <!-- W3C -->
+> <link rel="manifest" href="/static/manifest.json">
+> ```
+>
+> ```json
+> {
+> "name": "Podle",
+> "icons": [
+> 	{
+> 		"src": "/static/icon192.png",
+> 		"sizes": "192x192",
+> 		"type": "image/png"
+> 	},
+> 	{
+> 		"src": "/static/icon512.png",
+> 		"sizes": "512x512",
+> 		"type": "image/png"
+> 	}
+> ],
+> 	"start_url": "/v7/",
+> 	"display": "standalone",
+> 	"background_color": "white",
+> 	"theme_color": "#4E3F30"
+> }
+> ```
+
+
+<script>window.setDynamicSlide(window.elByEl());</script>
 <blockquote>
+<div>
 <div class="support-icon-container" samsung chrome edge-wip>{% include browser-icons.html %}</div>
 <h1>Triggering Browser Install Prompts</h1>
 <p>
@@ -224,6 +241,10 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 <img src="https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/images/add-to-home-screen.gif" alt="install banner gif"/>
 </p>
 <h2>https://samsunginter.net/docs/ambient-badging.html</h2>
+</div>
+<div><h2 style="margin: 0 0 0.3em 0;">Please show this to your product managers:</h2><img src="images/banners-prompt.jpg" />
+<h2 style="margin: 0; font-size: 3vw; text-align: center;">https://bit.ly/2q16RMd</h2>
+</div>
 </blockquote>
 
 <script>_setNextSlide(elByEl({preserve: '.support-icon-container'}));</script>
@@ -235,53 +256,12 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 <img src="images/the-pwa-web4.svg" alt="Push notifications allow us to almost discard the front end entirely">
 </blockquote>
 
-<script>_setNextSlide(elByEl({preserve: 'h1'}));</script>
-> # Registering a Service Worker
->
-> ```javascript
- if ('serviceWorker' in navigator) {
->
- 		if (navigator.serviceWorker.controller) {
->
-			// service worker already registered.
- 			return navigator.serviceWorker.ready;
- 		} else {
->
-			// service worker not registered
- 			return navigator.serviceWorker.register('/sw.js', {scope: './'})
- 			.then(() => navigator.serviceWorker.ready);
- 		}
- 	}
-```
->
 > ## The browser will start your Service Worker when a request is made in your service worker's scope
 >
 > ## The browser may stop your worker at any point if it is not being used.
 >
 > ## The service worker can intercept any fetch request made by the browser.
 
-<script>_setNextSlide(elByEl({preserve: 'h1'}));</script>
-> # Intercepting Network requests
->
-> ```javascript
-self.addEventListener('fetch', function(event) {
-	const request = event.request;
->
-	// Let videos go straight to the network
-	if (request.url.match(/(\.mp4|\.webm|\.avi|\.wmv|\.m4v)$/i)) {
-		return;
-	}
->
-	// Generate Response here
-	if (request.url.match(/^https:\/\/ada.is\/static\//i)) {
->
-		// doSomething, returns promise which resolves to a Response
-		const responsePromise = doSomething(request);
-		return event.respondWith(responsePromise);
-	}
-});
-```
->
 > * cache responses for speed
 > * cache responses to work offline
 > * create new responses
@@ -292,94 +272,9 @@ self.addEventListener('fetch', function(event) {
 >
 > <img src="images/notification.png" />
 
-> # 4 steps to Push Notifications:
->
-> 1. Request permission
-> 2. Get endpoint & token, save to server
-> 3. On the server make an API call on the endpoint with your notification
-> 4. In the service worker listen for 'push' events and make a notification
-
-<script>_setNextSlide(elByEl({preserve: 'h1'}));</script>
-> # Get permission
->
-> > NB in Chrome and Samsung Internet you need to register on *firebase cloud messaging* and add your project's id to your web app manifest.
-> >
-> > `gcm_sender_id": "103953800507"`
->
-> ```javascript
-// Has to occur with user input
-myButton.addEventListener('click', function () {
->
-	navigator.serviceWorker.ready.then(function () {
->
-		reg.pushManager.subscribe({
-			userVisibleOnly: true // declare we will use push for notifications
-		}).then(function success(subscription) {
->
-			// Tell user we are good to go
-			storeSubscription(subscription); // see next slide
-		}, function error() {
->
-			// User may have declined or the browser or OS may have refused
-		});
-	});
-});
-```
-
-> # Save token to server
->
- > ```json
- {
-  "endpoint": "http://example.com/some/uuid"
- }
-```
->
-> <p style="display: block;">In this case the url looks something like:
-> <span style="word-break: break-all; font-family: monospace; font-size: 0.8em;">https://android.googleapis.com/gcm/send/cz6YgbRXHAc:APA91bGWtm35_kAQsZEn_Ye…EVXj1MDXGulbtBWJYw4AGcIWXq7p5BjhFhnDhMQoqOHRzY9jI_OeOn_DQ5W_cYD5tCDDdjOD7d</span></p>
->
-> ```javascript
-function storeSubscription(subscription) {
-	return fetch('/api/send-message', {
-		method: 'POST',
-		credentials: 'same-origin',
-		headers: new Headers({
-			'Content-Type': 'application/json',
-			'Accept': 'application/json'
-		}),
-		body: JSON.stringify(subscription)
-	})
-}
-```
-
-> # Using that token on the server:
->
-> ## Ideally make a post request to the endpoint.
->
-> ## **BUT** differing implementations make this a little awkward so I use:
->
-> ## *https://github.com/web-push-libs/web-push*
-
-> # Making a notification
->
->```javascript
->
-self.addEventListener('push', function (event) {
->
-	const noti = self.registration.showNotification('Podcast updated', {
-		icon: 'https://podle.ada.is/static/icon192.png',
-		data: {title: 'Hello World'},
-		body: 'Lorem Ipsum'
-	});
->
-	event.waitUntil(noti);
-});
->
-self.addEventListener('notificationclick', function(event) {
-	event.notification.close();
-	clients.openWindow('/');
-});
-```
-
+<script>_setNextSlide(elByEl({preserve: '.support-icon-container'}));</script>
+> <div style="background: lavenderblush;"><img src="images/push-1.png" /></div>
+> <div style="background: lavenderblush;"><img src="images/push-2.png" /></div>
 
 ## Good Push Notifications
 
@@ -407,6 +302,8 @@ A "yes or no" answer can be done in the notification itself!
 
 > # Progressive Enhancement
 >
+> ## Not all features are available everywhere
+>
 > ## Browser vendors have different priorities.
 
 > # Future Web APIs coming soon to a browser near you
@@ -419,6 +316,8 @@ A "yes or no" answer can be done in the notification itself!
 >
 > ## WebGL2
 
+<!--
+
 Some fun patterns it may be worth looking into:
 
 > # Web App Patterns (Secret slide)
@@ -429,7 +328,6 @@ Some fun patterns it may be worth looking into:
 >
 > ## Headless Web
 
-<!--
 
 If you have concerns about whether the Web has the features you need the web platform has:
 
@@ -528,6 +426,22 @@ Minimising drain on users attention, be useful and timely but not intrusive.
 
 Become an invaluable part of their phone experience and they will keep coming back.
 -->
+
+<script type="text/javascript">
+window._executeOnNextEl(function (el) {
+	var qr = new QRCode(el.querySelector('.qr-target'), "https://joind.in/talk/15118");
+	console.log(qr);
+});
+</script>
+
+<blockquote style="display: block;">
+<h1>Please give feedback on this talk!</h1>
+<div style="display: block;">
+<h2>https://joind.in/talk/15118</h2>
+<span class="qr-target" style="float: right;background: white;align-self: flex-end;margin: 0.5em;flex-shrink: 0;"></span>
+</div>
+<h2>@samsunginternet</h2>
+</blockquote>
 
 <script>
 	// Fancy Emojis
