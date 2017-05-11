@@ -97,11 +97,11 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 > <h1>Web Apps look to solve an engagement problem...</h1>
 >
 > <div style="position: absolute; top: 0; left:0; width: 100%; height: 100%;">
-> <blockquote style="position: absolute; background: linear-gradient(to bottom, rgba(47,79,79,1) 10%, rgba(47,79,79,0.5) 100%); padding-bottom: 0.5em; text-shadow: 0 0 0.3em darkslategrey; margin: 0;">
+> <blockquote style="position: absolute; background: linear-gradient(to bottom, rgba(47,79,79,1) 10%, rgba(47,79,79,0.5) 100%); padding-bottom: 0em; text-shadow: 0 0 0.3em darkslategrey; margin: 0;">
 > <p>(Left) Poster showing how to download an events app; and (right) how it could have looked if they used a website instead.</p>
 > </blockquote>
 >
-> <img src="images/sign.jpg" style="margin-top: 1em; object-position: bottom;"/>
+> <img src="images/sign.jpg" style="margin-top: 2em; object-position: bottom;"/>
 > <span style="margin: 0 0 0.3em 0.3em;"> - Peter Gasston‏ (@stopsatgreen)</span>
 > </div>
 > <div><img src="images/leaving-export.png" style="margin: 0; filter: drop-shadow(0 0 1em rgba(0,0,0,0.4));" /></div>
@@ -135,7 +135,7 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 
 <script>window._setNextSlide(window.elByEl());</script>
 <blockquote style="background: linear-gradient(to bottom, rgb(29, 23, 66) 0%, rgb(30, 30, 119) 40%, rgb(62, 43, 47) 100%);">
-<div style="justify-content: center; text-align: center;"><h1>Quantifying This</h1></div>
+<div style="justify-content: center; text-align: center;"><h1>Quantifying Web Apps</h1></div>
 <div>
 <img src="images/lighthouse-logo.svg" />
 <h2 style="text-align: center;">Google Lighthouse</h2>
@@ -194,9 +194,9 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 > <div class="support-icon-container" chrome samsung firefox-wip edge-wip>{% include browser-icons.html %}</div>
 >
 > <div style="justify-content:center; text-align: center;">
-> <h1 style="font-size: 2em; margin: 0;">Geting an icon on the homescreen</h1>
+> <h1 style="font-size: 1.8em; margin: 0;">Getting an icon on the homescreen</h1>
 > <h2 style="margin: 1em 0;">~ With ~</h2>
-> <h1 style="margin: 0;">Web App Manifest</h1>
+> <h1 style="font-size: 2em; margin: 0;">Web App Manifest</h1>
 > </div>
 >
 > ```html
