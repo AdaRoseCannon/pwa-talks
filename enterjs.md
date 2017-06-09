@@ -429,7 +429,7 @@ Become an invaluable part of their phone experience and they will keep coming ba
 
 <script type="text/javascript">
 window._executeOnNextEl(function (el) {
-	var qr = new QRCode(el.querySelector('.qr-target'), "https://joind.in/talk/15118");
+	var qr = new QRCode(el.querySelector('.qr-target'), "http://o.ada.is/enterjs");
 	console.log(qr);
 });
 </script>
@@ -437,7 +437,7 @@ window._executeOnNextEl(function (el) {
 <blockquote style="display: block;">
 <h1>Please give feedback on this talk!</h1>
 <div style="display: block;">
-<h2>https://joind.in/talk/15118</h2>
+<h2>http://o.ada.is/enterjs</h2>
 <span class="qr-target" style="float: right;background: white;align-self: flex-end;margin: 0.5em;flex-shrink: 0;"></span>
 </div>
 <h2>@samsunginternet</h2>
