@@ -79,7 +79,7 @@ I am aiming this talk at everyone as good web app requires thoughts from both.
 > </div> 
 
 <blockquote style="background-color: white;">
-<img src="images/StatCounter-browser-DE-monthly-201605-201705" />
+<img src="images/StatCounter-browser-DE-monthly-201605-201705.png" />
 </blockquote>
 
 <script>window._setNextSlide(window.playVideo);</script>
